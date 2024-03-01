@@ -1,6 +1,6 @@
 {
-    "name": "Add-ons for Home Assistant by bilogic",
-    "udev": true,
-    "url": "https://github.com/bilogic/ha-addons",
-    "maintainer": "bilogic"
+	"name": "Add-ons for Home Assistant by celynw",
+	"udev": true,
+	"url": "https://github.com/celynw/ha-addons",
+	"maintainer": "celynw"
 }
