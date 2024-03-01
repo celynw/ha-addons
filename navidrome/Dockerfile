@@ -26,7 +26,7 @@ ENV MAX_TIME_DRIFT=0
 COPY rootfs/ /
 
 # Modules
-ARG MODULES="00-banner.sh 01-custom_script.sh 00-global_var.sh"
+ARG MODULES="00-global_var.sh"
 
 # Automatic modules download
 ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/ha_automodules.sh" "/ha_automodules.sh"
