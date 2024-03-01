@@ -9,8 +9,8 @@ bashio::config.has_value "ND_DATAFOLDER" && export ND_DATAFOLDER=$(bashio::confi
 
 # Create folder
 if [ ! -d "$ND_DATAFOLDER" ]; then
-    bashio::log.info "Creating ND_DATAFOLDER $ND_DATAFOLDER"
-    mkdir -p "$ND_DATAFOLDER"
+	bashio::log.info "Creating ND_DATAFOLDER $ND_DATAFOLDER"
+	mkdir -p "$ND_DATAFOLDER"
 fi
 
 # We are in the container's FS here
