@@ -114,11 +114,10 @@ LABEL \
 EXPOSE ${ND_PORT}
 HEALTHCHECK CMD wget -O- http://localhost:${ND_PORT}/ping || exit 1
 
-# ENV HEALTH_PORT="" \
-#     HEALTH_URL=""
-# HEALTHCHECK \
-#     --interval=5s \
-#     --retries=5 \
-#     --start-period=30s \
-#     --timeout=25s \
-#     CMD ps aux | grep "navidrome" | grep -v "grep" || exit 1
+ENV HEALTH_PORT="4533"
+HEALTHCHECK \
+    --interval=5s \
+    --retries=5 \
+    --start-period=30s \
+    --timeout=25s \
+    CMD wget -q --spider --proxy off localhost:${HEALTH_PORT} || exit 1
