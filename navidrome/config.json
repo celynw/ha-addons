@@ -71,6 +71,7 @@
 	"name": "Navidrome",
 	"options": {
 		"ND_DATAFOLDER": "/config/addons_config/navidrome",
+		"ND_ENABLEFAVOURITES": true,
 		"ND_ENABLEGRAVATAR": false,
 		"ND_ENABLESHARING": false,
 		"ND_ENABLESTARRATING": true,
@@ -105,6 +106,7 @@
 	],
 	"schema": {
 		"ND_DATAFOLDER": "str",
+		"ND_ENABLEFAVOURITES": "bool",
 		"ND_ENABLEGRAVATAR": "bool",
 		"ND_ENABLESHARING": "bool",
 		"ND_ENABLESTARRATING": "bool",
