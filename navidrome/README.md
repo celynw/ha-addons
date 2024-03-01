@@ -18,25 +18,36 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 
 ## Configuration
 
-Postgresql can be either internal or external
+### Home Assistant-specific
 
-```yaml
-    "PGID": "int",
-    "PUID": "int",
-    "TZ": "str?",
-    "cifsdomain": "str?",
-    "cifspassword": "str?",
-    "cifsusername": "str?",
-    "data_location": "str",
-    "localdisks": "str?",
-    "networkdisks": "str?",
-    "DB_HOSTNAME": "str?",
-    "DB_USERNAME": "str?",
-    "DB_PORT": "int?",
-    "DB_PASSWORD": "str?",
-    "DB_DATABASE_NAME": "str?",
-    "JWT_SECRET": "str?"
-```
+- `PUID`: User ID
+- `PGID`: Group ID
+
+### [Basic configuration](https://www.navidrome.org/docs/usage/configuration-options/#basic-configuration)
+
+- `ND_DATAFOLDER`: Folder to store application data (DB)
+- `ND_LOGLEVEL`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
+- `ND_MUSICFOLDER`: Folder where your music library is stored. Can be read-only
+
+### [Advanced configuration](https://www.navidrome.org/docs/usage/configuration-options/#advanced-configuration)
+
+- `ND_ENABLEGRAVATAR`: Use [Gravatar](https://gravatar.com/) images as the user profile image. Needs the user's email to be filled
+- `ND_ENABLESHARING`: Enable the Sharing feature
+- `ND_ENABLESTARRATING`: Enable 5-star ratings in the UI
+- `ND_JUKEBOX_DEFAULT`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `ND_JUKEBOX_DEVICES`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `ND_JUKEBOX_ENABLED`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `ND_LASTFM_APIKEY`: Last.fm API Key
+- `ND_LASTFM_ENABLED`: Set this to `false` to completely disable Last.fm integration
+- `ND_LASTFM_SECRET`: Last.fm API Secret
+- `ND_LISTENBRAINZ_ENABLED`: Set this to `false` to completely disable ListenBrainz integration
+- `ND_SCANSCHEDULE`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
+- `ND_SESSIONTIMEOUT`: How long Navidrome will wait before closing web ui idle sessions
+- `ND_SPOTIFY_ID`: Spotify Client ID. Required if you want Artist images
+- `ND_SPOTIFY_SECRET`: Spotify Client Secret. Required if you want Artist images
+- `ND_TRANSCODINGCACHESIZE`: Size of transcoding cache. Set to `"0"` to disable cache
+- `ND_UILOGINBACKGROUNDURL`: Change background image used in the Login page
+- `ND_UIWELCOMEMESSAGE`: Add a welcome message to the login screen
 
 ## Installation
 
