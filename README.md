@@ -10,7 +10,7 @@ This repository is one of those repositories, providing extra Home Assistant add
 [![Add repository on my Home Assistant][repository-badge]][repository-url]
 
 If you want to do add the repository manually, please follow the procedure highlighted in the [Home Assistant website](https://home-assistant.io/hassio/installing_third_party_addons).
-Use the following URL to add this repository: https://github.com/alexbelgium/hassio-addons
+Use the following URL to add this repository: https://github.com/celynw/ha-addons
 
 ## Add-ons provided by this repository
 
