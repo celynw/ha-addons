@@ -83,7 +83,7 @@
 		"ND_LASTFM_SECRET": "",
 		"ND_LISTENBRAINZ_ENABLED": true,
 		"ND_LOGLEVEL": "info",
-		"ND_MUSICFOLDER": "/media/Media/music",
+		"ND_MUSICFOLDER": null,
 		"ND_SCANSCHEDULE": "@every 1m",
 		"ND_SESSIONTIMEOUT": "30m",
 		"ND_SPOTIFY_ID": "",

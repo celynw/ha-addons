@@ -31,7 +31,7 @@ if bashio::supervisor.ping; then
 	bashio::log.blue \
 		"--------------------------------------------------------------------------------"
 	bashio::log.green \
-		" Provided by: https://github.com/alexbelgium/hassio-addons"
+		" Provided by: https://github.com/celynw/hassio-addons"
 	bashio::log.blue \
 		"--------------------------------------------------------------------------------"
 fi
