@@ -86,9 +86,6 @@ LABEL \
 
 
 # 6 Healthcheck ------------------------------------------------------------------------
-EXPOSE ${ND_PORT}
-HEALTHCHECK CMD wget -O- http://localhost:${ND_PORT}/ping || exit 1
-
 ENV HEALTH_PORT="4533"
 HEALTHCHECK \
 	--interval=5s \
