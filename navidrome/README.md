@@ -26,8 +26,8 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 ### [Basic configuration](https://www.navidrome.org/docs/usage/configuration-options/#basic-configuration)
 
 - `ND_DATAFOLDER`: Folder to store application data (DB)
-- `ND_LOGLEVEL`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
 - `ND_MUSICFOLDER`: Folder where your music library is stored. Can be read-only
+- `ND_LOGLEVEL`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
 
 ### [Advanced configuration](https://www.navidrome.org/docs/usage/configuration-options/#advanced-configuration)
 
