@@ -26,29 +26,30 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 
 ### [Basic configuration](https://www.navidrome.org/docs/usage/configuration-options/#basic-configuration)
 
-- `ND_DATAFOLDER`: Folder to store application data (DB)
-- `ND_LOGLEVEL`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
-- `ND_MUSICFOLDER`: Folder where your music library is stored. Can be read-only
+- `MusicFolder`: Folder where your music library is stored. Can be read-only
+- `DataFolder`: Folder to store application data (DB)
+- `LogLevel`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
 
 ### [Advanced configuration](https://www.navidrome.org/docs/usage/configuration-options/#advanced-configuration)
 
-- `ND_ENABLEGRAVATAR`: Use [Gravatar](https://gravatar.com/) images as the user profile image. Needs the user's email to be filled
-- `ND_ENABLESHARING`: Enable the Sharing feature
-- `ND_ENABLESTARRATING`: Enable 5-star ratings in the UI
-- `ND_JUKEBOX_DEFAULT`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `ND_JUKEBOX_DEVICES`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `ND_JUKEBOX_ENABLED`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `ND_LASTFM_APIKEY`: Last.fm API Key
-- `ND_LASTFM_ENABLED`: Set this to `false` to completely disable Last.fm integration
-- `ND_LASTFM_SECRET`: Last.fm API Secret
-- `ND_LISTENBRAINZ_ENABLED`: Set this to `false` to completely disable ListenBrainz integration
-- `ND_SCANSCHEDULE`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
-- `ND_SESSIONTIMEOUT`: How long Navidrome will wait before closing web ui idle sessions
-- `ND_SPOTIFY_ID`: Spotify Client ID. Required if you want Artist images
-- `ND_SPOTIFY_SECRET`: Spotify Client Secret. Required if you want Artist images
-- `ND_TRANSCODINGCACHESIZE`: Size of transcoding cache. Set to `"0"` to disable cache
-- `ND_UILOGINBACKGROUNDURL`: Change background image used in the Login page
-- `ND_UIWELCOMEMESSAGE`: Add a welcome message to the login screen
+- `EnableFavourites`: Enable toggling "Heart"/"Loved" for songs/albums/artists in the UI (maps to "Star"/"Starred" in Subsonic Clients)
+- `EnableGravatar`: Use [Gravatar](https://gravatar.com/) images as the user profile image. Needs the user's email to be filled
+- `EnableSharing`: Enable the Sharing feature
+- `EnableStarRating`: Enable 5-star ratings in the UI
+- `Jukebox`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `Jukebox`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `Jukebox`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `LastFM`: Last.fm API Key
+- `LastFM`: Set this to `false` to completely disable Last.fm integration
+- `LastFM`: Last.fm API Secret
+- `ListenBrainz`: Set this to `false` to completely disable ListenBrainz integration
+- `ScanSchedule`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
+- `SessionTimeout`: How long Navidrome will wait before closing web ui idle sessions
+- `Spotify`: Spotify Client ID. Required if you want Artist images
+- `Spotify`: Spotify Client Secret. Required if you want Artist images
+- `TranscodingCacheSize`: Size of transcoding cache. Set to `"0"` to disable cache
+- `UILoginBackgroundUrl`: Change background image used in the Login page
+- `UIWelcomeMessage`: Add a welcome message to the login screen
 
 ## Installation
 
