@@ -7,7 +7,7 @@
 	"backup_exclude": [
 		"**/cache"
 	],
-	"description": "Navidrome is a self-hosted, open source music server and streamer. It gives you freedom to listen to your music collection from any browser or mobile device.",
+	"description": "Modern Music Server and Streamer compatible with Subsonic/Airsonic",
 	"devices": [
 		"/dev/dri",
 		"/dev/dri/card0",
@@ -102,7 +102,7 @@
 		"PUID": "int"
 	},
 	"slug": "navidrome",
-	"url": "https://github.com/bilogic/ha-addons/tree/main/navidrome",
-	"version": "1.0.33",
-	"webui": "[PROTO:ssl]://[HOST]:[PORT:4533]"
+	"url": "https://github.com/celynw/ha-addons/tree/main/navidrome",
+	"version": "0.51.1",
+	"webui": "http://[HOST]:[PORT:4533]"
 }
