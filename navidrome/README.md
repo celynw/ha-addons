@@ -69,4 +69,5 @@ Use the following URL to add this repository: https://github.com/celynw/ha-addon
 
 [Create an issue](https://github.com/celynw/ha-addons/issues) in this GitHub repository.
 
+[repository-badge]: https://img.shields.io/badge/Add%20repository%20to%20my-Home%20Assistant-41BDF5?logo=home-assistant&style=for-the-badge
 [repository-url]: https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fcelynw%2Fha-addons
