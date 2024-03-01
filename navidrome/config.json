@@ -71,10 +71,10 @@
 	"name": "Navidrome",
 	"options": {
 		"ND_DATAFOLDER": "/config/addons_config/navidrome",
-		"ND_ENABLESHARING": true,
+		"ND_ENABLESHARING": false,
 		"ND_LOGLEVEL": "info",
 		"ND_MUSICFOLDER": "/media/Media/music",
-		"ND_SCANINTERVAL": "1m",
+		"ND_SCANSCHEDULE": "@every 1m",
 		"ND_SESSIONTIMEOUT": "30m",
 		"ND_TRANSCODINGCACHESIZE": "100MB",
 		"PGID": 0,
@@ -91,12 +91,12 @@
 		"SYS_TIME"
 	],
 	"schema": {
-		"ND_DATAFOLDER": "str?",
+		"ND_DATAFOLDER": "str",
 		"ND_ENABLESHARING": "bool",
 		"ND_LOGLEVEL": "str?",
-		"ND_MUSICFOLDER": "str?",
-		"ND_SCANINTERVAL": "str?",
-		"ND_SESSIONTIMEOUT": "str?",
+		"ND_MUSICFOLDER": "str",
+		"ND_SCANSCHEDULE": "str",
+		"ND_SESSIONTIMEOUT": "str",
 		"ND_TRANSCODINGCACHESIZE": "str",
 		"PGID": "int",
 		"PUID": "int"
