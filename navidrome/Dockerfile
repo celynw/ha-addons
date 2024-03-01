@@ -3,7 +3,7 @@
 # Build Image --------------------------------------------------------------------------
 ARG BUILD_FROM
 ARG BUILD_VERSION
-ARG BUILD_UPSTREAM="latest"
+ARG BUILD_UPSTREAM="0.51.1"
 FROM ${BUILD_FROM}
 
 
