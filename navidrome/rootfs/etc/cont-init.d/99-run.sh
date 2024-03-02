@@ -27,7 +27,6 @@ for KEYS in "${arr[@]}"; do
 	export "${KEYS}=${VALUE//[\"\']/}"
 done
 
-
 # Settings parameters
 export ND_LOGLEVEL=$(bashio::config "LogLevel") && bashio::log.info "ND_LOGLEVEL set to $ND_LOGLEVEL"
 export ND_ENABLEFAVOURITES=$(bashio::config "EnableFavourites") && bashio::log.info "ND_ENABLEFAVOURITES set to $ND_ENABLEFAVOURITES"

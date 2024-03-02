@@ -25,36 +25,25 @@ ENV MAX_TIME_DRIFT=0
 # Add rootfs
 COPY rootfs/ /
 
-# Modules
-ARG MODULES="00-global_var.sh"
-
-# Automatic modules download
-ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/ha_automodules.sh" "/ha_automodules.sh"
-RUN chmod 0744 "/ha_automodules.sh"
-RUN /ha_automodules.sh "$MODULES" && rm /ha_automodules.sh
-
 # Manual apps
 ENV PACKAGES="procps"
 
-# Automatic apps & bashio
-ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/ha_autoapps.sh" "/ha_autoapps.sh"
-RUN chmod 0744 "/ha_autoapps.sh"
-RUN /ha_autoapps.sh "$PACKAGES" && rm /ha_autoapps.sh
+ADD ./scripts/init.sh /init.sh
+RUN chmod 0744 /init.sh
+RUN /init.sh && rm /init.sh
 
+ADD ./scripts/apps.bash /apps.bash
+RUN chmod 0744 /apps.bash
+RUN /apps.bash "$PACKAGES" && rm /apps.bash
 
 # Entrypoint ---------------------------------------------------------------------------
 # Add entrypoint
-ENV S6_STAGE2_HOOK=/ha_entrypoint.sh
-ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/ha_entrypoint.sh" "/ha_entrypoint.sh"
-RUN chmod 0777 "/ha_entrypoint.sh"
-
-# Entrypoint modifications
-ADD "https://raw.githubusercontent.com/alexbelgium/hassio-addons/master/.templates/ha_entrypoint_modif.sh" "/ha_entrypoint_modif.sh"
-RUN chmod 0777 "/ha_entrypoint_modif.sh"
-RUN /ha_entrypoint_modif.sh && rm /ha_entrypoint_modif.sh
+ADD ./scripts/ha_entrypoint.bashio /ha_entrypoint.bashio
+ENV S6_STAGE2_HOOK=/ha_entrypoint.bashio
+RUN chmod 0777 "/ha_entrypoint.bashio"
 
 ENTRYPOINT [ "/usr/bin/env" ]
-CMD [ "/ha_entrypoint.sh" ]
+CMD [ "/ha_entrypoint.bashio" ]
 
 
 # Labels -------------------------------------------------------------------------------

@@ -1,6 +1,7 @@
 #!/usr/bin/with-contenv bashio
 # shellcheck shell=bash
 set -e
+
 # Display a simple addon banner on startup --------------------------------------------
 if bashio::supervisor.ping; then
 	bashio::log.blue \
@@ -36,9 +37,8 @@ if bashio::supervisor.ping; then
 		"--------------------------------------------------------------------------------"
 fi
 
-# ==============================================================================
-# Global actions for all addons
-# ==============================================================================
+
+# Global actions for all addons --------------------------------------------------------
 if bashio::config.has_value "PUID" && bashio::config.has_value "PGID"; then
 	bashio::log.green " Defining permissions for main user: "
 	PUID="$(bashio::config "PUID")"
