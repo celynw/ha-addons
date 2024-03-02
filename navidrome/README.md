@@ -36,17 +36,17 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 - `EnableGravatar`: Use [Gravatar](https://gravatar.com/) images as the user profile image. Needs the user's email to be filled
 - `EnableSharing`: Enable the Sharing feature
 - `EnableStarRating`: Enable 5-star ratings in the UI
-- `Jukebox`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `Jukebox`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `Jukebox`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `LastFM`: Last.fm API Key
-- `LastFM`: Set this to `false` to completely disable Last.fm integration
-- `LastFM`: Last.fm API Secret
-- `ListenBrainz`: Set this to `false` to completely disable ListenBrainz integration
+- `Jukebox.Default`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `Jukebox.Devices`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `Jukebox.Enabled`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
+- `LastFM.ApiKey`: Last.fm API Key
+- `LastFM.Enabled`: Set this to `false` to completely disable Last.fm integration
+- `LastFM.Secret`: Last.fm API Secret
+- `ListenBrainz.Enabled`: Set this to `false` to completely disable ListenBrainz integration
 - `ScanSchedule`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
 - `SessionTimeout`: How long Navidrome will wait before closing web ui idle sessions
-- `Spotify`: Spotify Client ID. Required if you want Artist images
-- `Spotify`: Spotify Client Secret. Required if you want Artist images
+- `Spotify.ID`: Spotify Client ID. Required if you want Artist images
+- `Spotify.Secret`: Spotify Client Secret. Required if you want Artist images
 - `TranscodingCacheSize`: Size of transcoding cache. Set to `"0"` to disable cache
 - `UILoginBackgroundUrl`: Change background image used in the Login page
 - `UIWelcomeMessage`: Add a welcome message to the login screen
