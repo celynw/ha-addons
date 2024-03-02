@@ -63,9 +63,10 @@ options=(
 	"ND_UILOGINBACKGROUNDURL"
 	"ND_UIWELCOMEMESSAGE"
 )
-for opt in "${options[@]}"; do
-	export "$opt"=$(bashio::config "$opt")
-	bashio::log.info "$opt set to ${!opt}"
+for option in "${options[@]}"; do
+	opt=$(bashio::config "$option")
+	export "$option"="$opt"
+	bashio::log.info "$option set to ${!option}"
 done
 
 # Start Navidrome ----------------------------------------------------------------------
