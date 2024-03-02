@@ -17,39 +17,7 @@ It's like your personal Spotify!
 
 This addon is based on the [official docker image](https://hub.docker.com/r/deluan/navidrome) from [deluan](https://hub.docker.com/u/deluan).
 
-## Configuration
-
-### Home Assistant-specific
-
-- `PUID`: User ID
-- `PGID`: Group ID
-
-### [Basic configuration](https://www.navidrome.org/docs/usage/configuration-options/#basic-configuration)
-
-- `MusicFolder`: Folder where your music library is stored. Can be read-only
-- `DataFolder`: Folder to store application data (DB)
-- `LogLevel`: Log level. Useful for troubleshooting. Possible values: error, warn, info, debug, trace
-
-### [Advanced configuration](https://www.navidrome.org/docs/usage/configuration-options/#advanced-configuration)
-
-- `EnableFavourites`: Enable toggling "Heart"/"Loved" for songs/albums/artists in the UI (maps to "Star"/"Starred" in Subsonic Clients)
-- `EnableGravatar`: Use [Gravatar](https://gravatar.com/) images as the user profile image. Needs the user's email to be filled
-- `EnableSharing`: Enable the Sharing feature
-- `EnableStarRating`: Enable 5-star ratings in the UI
-- `Jukebox_Default`: Device to use for Jukebox mode, if there are multiple `Jukebox.Devices` entries. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `Jukebox_Devices`: List of devices that can be used by the Jukebox. Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `Jukebox_Enabled`: Enable Jukebox mode (play audio on server’s hardware) Click [here](https://www.navidrome.org/docs/usage/jukebox/#configuration) for details
-- `LastFM_ApiKey`: Last.fm API Key
-- `LastFM_Enabled`: Set this to `false` to completely disable Last.fm integration
-- `LastFM_Secret`: Last.fm API Secret
-- `ListenBrainz_Enabled`: Set this to `false` to completely disable ListenBrainz integration
-- `ScanSchedule`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
-- `SessionTimeout`: How long Navidrome will wait before closing web ui idle sessions
-- `Spotify_ID`[*](https://www.navidrome.org/docs/usage/external-integrations/#spotify): Spotify Client ID. Required if you want Artist images
-- `Spotify_Secret`[*](https://www.navidrome.org/docs/usage/external-integrations/#spotify): Spotify Client Secret. Required if you want Artist images
-- `TranscodingCacheSize`: Size of transcoding cache. Set to `"0"` to disable cache
-- `UILoginBackgroundUrl`: Change background image used in the Login page
-- `UIWelcomeMessage`: Add a welcome message to the login screen
+The documentation for the configuration values can be found [here](https://www.navidrome.org/docs/usage/configuration-options).
 
 ## Installation
 

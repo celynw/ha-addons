@@ -1,0 +1,84 @@
+---
+configuration:
+  PUID:
+    name: User ID
+  PGID:
+    name: Group ID
+  ND_MUSICFOLDER:
+    name: Music folder
+    description: >-
+      Folder where your music library is stored. Can be read-only
+  ND_DATAFOLDER:
+    name: Data folder
+    description: >-
+      Folder to store application data (DB)
+  ND_LOGLEVEL:
+    name: Log level
+    description: >-
+      Useful for troubleshooting
+  ND_ENABLEFAVOURITES:
+    name: Enable favourites
+    description: >-
+      Enable toggling "Heart"/"Loved" for songs/albums/artists in the UI (maps to "Star"/"Starred" in Subsonic Clients)
+  ND_ENABLEGRAVATAR:
+    name: Enable Gravatar
+    description: >-
+      Use Gravatar images as the user profile image. Needs the user's email to be filled
+  ND_ENABLESHARING:
+    name: Enable sharing
+  ND_ENABLESTARRATING:
+    name: Enable star rating
+    description: >-
+      Enable 5-star ratings in the UI
+  ND_JUKEBOX_DEFAULT:
+    name: Jukebox default
+    description: >-
+      Device to use for Jukebox mode, if there are multiple "Jukebox Devices" entries
+  ND_JUKEBOX_DEVICES:
+    name: Jukebox devices
+    description: >-
+      List of devices that can be used by the Jukebox
+  ND_JUKEBOX_ENABLED:
+    name: Jukebox enabled
+    description: >-
+      Enable Jukebox mode (play audio on server's hardware)
+  ND_LASTFM_APIKEY:
+    name: Last.fm API key
+  ND_LASTFM_ENABLED:
+    name: LastFM enabled
+    description: >-
+      Set this to false to completely disable Last.fm integration
+  ND_LASTFM_SECRET:
+    name: Last.fm API secret
+  ND_LISTENBRAINZ_ENABLED:
+    name: ListenBrainz enabled
+    description: >-
+      Set this to false to completely disable ListenBrainz integration
+  ND_SCANSCHEDULE:
+    name: Scan schedule
+    description: >-
+      Configure periodic scans using "cron" syntax. To disable it altogether, set it to "0"
+  ND_SESSIONTIMEOUT:
+    name: Session timeout
+    description: >-
+      How long Navidrome will wait before closing web ui idle sessions
+  ND_SPOTIFY_ID:
+    name: Spotify client ID
+    description: >-
+      Required if you want artist images
+  ND_SPOTIFY_SECRET:
+    name: Spotify client secret
+    description: >-
+      Required if you want artist images
+  ND_TRANSCODINGCACHESIZE:
+    name: Transcoding Cache Size
+    description: >-
+      Size of transcoding cache. Set to "0" to disable cache
+  ND_UILOGINBACKGROUNDURL:
+    name: Login background URL
+    description: >-
+      Change background image used in the login page
+  ND_UIWELCOMEMESSAGE:
+    name: Welcome message
+    description: >-
+      Add a welcome message to the login screen
