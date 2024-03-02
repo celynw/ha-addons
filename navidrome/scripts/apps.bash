@@ -11,12 +11,6 @@ PACKAGES="${*:-}"
 (echo "debconf debconf/frontend select Noninteractive" | debconf-set-selections) &>/dev/null || true
 
 # Install Manual Apps ------------------------------------------------------------------
-# # Install micro texteditor
-# curl https://getmic.ro | bash
-# mv micro /usr/bin
-# micro -plugin install bounce
-# micro -plugin install filemanager
-
 for file in "/etc/services.d" "/etc/cont-init.d"; do
 	# Next directory if does not exist
 	if ! ls $file 1>/dev/null 2>&1; then continue; fi
