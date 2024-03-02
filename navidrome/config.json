@@ -107,7 +107,7 @@
 	"schema": {
 		"MusicFolder": "str",
 		"DataFolder": "str",
-		"LogLevel": "str?",
+		"LogLevel": "list(error|warn|info|debug|trace)",
 		"EnableFavourites": "bool",
 		"EnableGravatar": "bool",
 		"EnableSharing": "bool",
