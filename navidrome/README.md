@@ -45,8 +45,8 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 - `ListenBrainz.Enabled`: Set this to `false` to completely disable ListenBrainz integration
 - `ScanSchedule`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
 - `SessionTimeout`: How long Navidrome will wait before closing web ui idle sessions
-- `Spotify.ID`: Spotify Client ID. Required if you want Artist images
-- `Spotify.Secret`: Spotify Client Secret. Required if you want Artist images
+- `Spotify.ID`[*](https://www.navidrome.org/docs/usage/external-integrations/#spotify): Spotify Client ID. Required if you want Artist images
+- `Spotify.Secret`[*](https://www.navidrome.org/docs/usage/external-integrations/#spotify): Spotify Client Secret. Required if you want Artist images
 - `TranscodingCacheSize`: Size of transcoding cache. Set to `"0"` to disable cache
 - `UILoginBackgroundUrl`: Change background image used in the Login page
 - `UIWelcomeMessage`: Add a welcome message to the login screen
