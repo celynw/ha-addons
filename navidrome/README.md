@@ -42,7 +42,7 @@ This addon is based on the [official docker image](https://hub.docker.com/r/delu
 - `LastFM_ApiKey`: Last.fm API Key
 - `LastFM_Enabled`: Set this to `false` to completely disable Last.fm integration
 - `LastFM_Secret`: Last.fm API Secret
-- `ListenBrainz.Enabled`: Set this to `false` to completely disable ListenBrainz integration
+- `ListenBrainz_Enabled`: Set this to `false` to completely disable ListenBrainz integration
 - `ScanSchedule`: Configure periodic scans using ["cron"](https://crontab.guru/) syntax. To disable it altogether, set it to `"0"`
 - `SessionTimeout`: How long Navidrome will wait before closing web ui idle sessions
 - `Spotify_ID`[*](https://www.navidrome.org/docs/usage/external-integrations/#spotify): Spotify Client ID. Required if you want Artist images
