@@ -1,16 +1,30 @@
 #!/usr/bin/env bashio
-# shellcheck shell=bash
-# shellcheck disable=SC2155,SC2016
 set -e
 
-# Export all addon options as env ------------------------------------------------------
+# Configure app data -------------------------------------------------------------------
+export ND_MUSICFOLDER=$(bashio::config "MusicFolder") && bashio::log.info "ND_MUSICFOLDER set to $ND_MUSICFOLDER"
+export ND_DATAFOLDER=$(bashio::config "DataFolder") && bashio::log.info "ND_DATAFOLDER set to $ND_DATAFOLDER"
+
+# Create folder
+if [ ! -d "$ND_DATAFOLDER" ]; then
+	bashio::log.info "Creating ND_DATAFOLDER $ND_DATAFOLDER"
+	mkdir -p "$ND_DATAFOLDER"
+fi
+
+# We are in the container's FS here
+bashio::log.info "Looking inside ND_DATAFOLDER $ND_DATAFOLDER"
+ls -la $ND_DATAFOLDER
+bashio::log.info "Looking inside ND_MUSICFOLDER $ND_MUSICFOLDER"
+ls -la $ND_MUSICFOLDER
+
+
+# Export custom addon options as environment variables ---------------------------------
 bashio::log.info "Setting variables"
 
 # For all keys in options.json
 JSONSOURCE="/data/options.json"
 
 # Export keys as env variables
-# echo "All addon options were exported as variables"
 mapfile -t arr < <(jq -r 'keys[]' "${JSONSOURCE}")
 
 for KEYS in "${arr[@]}"; do
@@ -27,7 +41,7 @@ for KEYS in "${arr[@]}"; do
 	export "${KEYS}=${VALUE//[\"\']/}"
 done
 
-# Settings parameters
+# Options
 export ND_LOGLEVEL=$(bashio::config "LogLevel") && bashio::log.info "ND_LOGLEVEL set to $ND_LOGLEVEL"
 export ND_ENABLEFAVOURITES=$(bashio::config "EnableFavourites") && bashio::log.info "ND_ENABLEFAVOURITES set to $ND_ENABLEFAVOURITES"
 export ND_ENABLEGRAVATAR=$(bashio::config "EnableGravatar") && bashio::log.info "ND_ENABLEGRAVATAR set to $ND_ENABLEGRAVATAR"
@@ -48,25 +62,7 @@ export ND_TRANSCODINGCACHESIZE=$(bashio::config "TranscodingCacheSize") && bashi
 export ND_UILOGINBACKGROUNDURL=$(bashio::config "UILoginBackgroundUrl") && bashio::log.info "ND_UILOGINBACKGROUNDURL set to $ND_UILOGINBACKGROUNDURL"
 export ND_UIWELCOMEMESSAGE=$(bashio::config "UIWelcomeMessage") && bashio::log.info "ND_UIWELCOMEMESSAGE set to $ND_UIWELCOMEMESSAGE"
 
-# Export variables
-{
-	printf "%s\n" "export ND_LOGLEVEL=\"$ND_LOGLEVEL\""
-	printf "%s\n" "export ND_ENABLEFAVOURITES=\"$ND_ENABLEFAVOURITES\""
-	printf "%s\n" "export ND_ENABLEGRAVATAR=\"$ND_ENABLEGRAVATAR\""
-	printf "%s\n" "export ND_ENABLESHARING=\"$ND_ENABLESHARING\""
-	printf "%s\n" "export ND_ENABLESTARRATING=\"$ND_ENABLESTARRATING\""
-	printf "%s\n" "export ND_JUKEBOX_DEFAULT=\"$ND_JUKEBOX_DEFAULT\""
-	printf "%s\n" "export ND_JUKEBOX_DEVICES=\"$ND_JUKEBOX_DEVICES\""
-	printf "%s\n" "export ND_JUKEBOX_ENABLED=\"$ND_JUKEBOX_ENABLED\""
-	printf "%s\n" "export ND_LASTFM_APIKEY=\"$ND_LASTFM_APIKEY\""
-	printf "%s\n" "export ND_LASTFM_ENABLED=\"$ND_LASTFM_ENABLED\""
-	printf "%s\n" "export ND_LASTFM_SECRET=\"$ND_LASTFM_SECRET\""
-	printf "%s\n" "export ND_LISTENBRAINZ_ENABLED=\"$ND_LISTENBRAINZ_ENABLED\""
-	printf "%s\n" "export ND_SCANSCHEDULE=\"$ND_SCANSCHEDULE\""
-	printf "%s\n" "export ND_SESSIONTIMEOUT=\"$ND_SESSIONTIMEOUT\""
-	printf "%s\n" "export ND_SPOTIFY_ID=\"$ND_SPOTIFY_ID\""
-	printf "%s\n" "export ND_SPOTIFY_SECRET=\"$ND_SPOTIFY_SECRET\""
-	printf "%s\n" "export ND_TRANSCODINGCACHESIZE=\"$ND_TRANSCODINGCACHESIZE\""
-	printf "%s\n" "export ND_UILOGINBACKGROUNDURL=\"$ND_UILOGINBACKGROUNDURL\""
-	printf "%s\n" "export ND_UIWELCOMEMESSAGE=\"$ND_UIWELCOMEMESSAGE\""
-} >> ~/.bashrc
+
+# Start Navidrome ----------------------------------------------------------------------
+bashio::log.info "Starting Navidrome..."
+/app/navidrome
