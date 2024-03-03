@@ -69,6 +69,11 @@ for option in "${options[@]}"; do
 	bashio::log.info "$option set to ${!option}"
 done
 
+# Start NGinx for ingress --------------------------------------------------------------
+bashio::log.info "Starting NGinx..."
+nginx & true
+
+
 # Start Navidrome ----------------------------------------------------------------------
 bashio::log.info "Starting Navidrome..."
 /app/navidrome

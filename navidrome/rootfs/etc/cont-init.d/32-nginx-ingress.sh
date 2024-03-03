@@ -2,10 +2,7 @@
 # shellcheck shell=bash
 set -e
 
-# Nginx settings -----------------------------------------------------------------------
-declare ingress_interface
-declare ingress_port
-
+# NGinx settings -----------------------------------------------------------------------
 ingress_port=$(bashio::addon.ingress_port)
 ingress_interface=$(bashio::addon.ip_address)
 ingress_entry=$(bashio::addon.ingress_entry)

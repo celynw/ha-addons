@@ -9,6 +9,9 @@ apk add --no-cache ca-certificates >/dev/null
 apk add --no-cache jq >/dev/null
 apk add --no-cache nginx >/dev/null
 
+# Create folder for NGinx
+mkdir -p /run/nginx
+
 # Create folder for scripts
 mkdir -p /etc/cont-init.d
 chmod -R 755 /etc/cont-init.d
