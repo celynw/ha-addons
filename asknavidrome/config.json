@@ -100,7 +100,7 @@
 		"NAVI_API_VER": "str",
 		"NAVI_DEBUG": "int"
 	},
-	"slug": "navidrome",
+	"slug": "asknavidrome",
 	"url": "https://github.com/celynw/ha-addons/tree/main/asknavidrome",
 	"version": "0.8",
 	"webui": "[PROTO:ssl]//[HOST]:[PORT:5000]"
