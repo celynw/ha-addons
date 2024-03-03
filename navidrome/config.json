@@ -132,5 +132,5 @@
 	"slug": "navidrome",
 	"url": "https://github.com/celynw/ha-addons/tree/main/navidrome",
 	"version": "0.51.1",
-	"webui": "http://[HOST]:[PORT:4533]"
+	"webui": "[PROTO:ssl]://[HOST]:[PORT:4533]"
 }
