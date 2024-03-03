@@ -119,7 +119,7 @@
 		"ND_LASTFM_APIKEY": "str?",
 		"ND_LASTFM_SECRET": "str?",
 		"ND_JUKEBOX_ENABLED": "bool",
-		"ND_JUKEBOX_DEFAULT": "device",
+		"ND_JUKEBOX_DEFAULT": "str?",
 		"ND_JUKEBOX_DEVICES": "str?",
 		"ND_TRANSCODINGCACHESIZE": "str",
 		"ND_SCANSCHEDULE": "str",
