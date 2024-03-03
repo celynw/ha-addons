@@ -74,7 +74,7 @@ LABEL \
 	org.opencontainers.image.version=${BUILD_VERSION}
 
 
-# 6 Healthcheck ------------------------------------------------------------------------
+# Healthcheck --------------------------------------------------------------------------
 ENV HEALTH_PORT="4533"
 HEALTHCHECK \
 	--interval=5s \
