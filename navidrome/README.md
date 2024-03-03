@@ -27,12 +27,12 @@ If you want to do add the repository manually, follow the procedure highlighted 
 
 Use the following URL to add this repository: https://github.com/celynw/ha-addons
 
-1. Add my Home Assistant add-ons repository to your Home Assistant instance
+1. Add my Home Assistant Addons repository to your Home Assistant instance
 1. Install this addon
 1. Set the configuration if necessary.
    See the [official documentation](https://www.navidrome.org/docs/usage/configuration-options/) for an explanation of the environment variables
 1. Click `Save` to store your configuration
-1. Start the add-on
+1. Start the addon
 1. Check the logs of the addon to see if everything went well
 
 ## Support
