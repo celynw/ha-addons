@@ -1,0 +1,7 @@
+{
+	"build_from": {
+		"aarch64": "alpine:3.15.0",
+		"armv7": "alpine:3.15.0",
+		"amd64": "alpine:3.15.0"
+	}
+}

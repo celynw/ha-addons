@@ -1,0 +1,37 @@
+---
+configuration:
+  NAVI_SKILL_ID:
+    name: Alexa skill ID
+    description: >-
+      This prevents other skills from connecting to the web service. E.g. `amzn1.ask.skill.xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx`
+  NAVI_SONG_COUNT:
+    name: Navidrome song count
+    description: >-
+      The minimum number of songs to add to a playlist. If playing random music, music by genre or music by an artist the web service will ensure the minimum number of tracks added to the queue is at least this value
+  NAVI_URL:
+    name: Navidrome URL
+    description: The URL to the Subsonic API server
+  NAVI_USER:
+    name: Navidrome username
+    description: >-
+      The user name used to connect to the Subsonic API server
+  NAVI_PASS:
+    name: Navidrome password
+    description: >-
+      The password used to connect to the Subsonic API server
+  NAVI_PORT:
+    name: Navidrome port
+    description: >-
+      The port the Subsonic API server is listening on
+  NAVI_API_PATH:
+    name: Navidrome API path
+    description: >-
+      The path to the Subsonic API, this should be `/rest` if you are using Navidrome and haven't changed anything
+  NAVI_API_VER:
+    name: Navidrome API version
+    description: >-
+      The version of the Subsonic API in use
+  NAVI_DEBUG:
+    name:
+    description:
+      Enable debugging, by setting this variable to 1 (warning), 2 (debug) or 3 (UI)
