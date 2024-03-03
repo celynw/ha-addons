@@ -23,6 +23,14 @@ Use the following URL to add this repository: https://github.com/celynw/ha-addon
 ![amd64][amd64-badge]
 ![armv7][armv7-badge]
 
+✓ [AskNavidrome](asknavidrome/): An Alexa skill to allow streaming of music from Subsonic API compatible media servers on Amazon Echo devices
+
+&emsp;&emsp;![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcelynw%2Fha-addons%2Fmaster%2Fasknavidrome%2Fconfig.json)
+[![Upstream](https://img.shields.io/github/v/release/rosskouk/asknavidrome?label=Upstream)](https://github.com/rosskouk/asknavidrome/tree/v0.8)
+![aarch64][aarch64-badge]
+![amd64][amd64-badge]
+![armv7][armv7-badge]
+
 ## Support/Links
 
 Open an issue/PR in this repository.
