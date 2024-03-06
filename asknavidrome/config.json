@@ -103,5 +103,5 @@
 	"slug": "asknavidrome",
 	"url": "https://github.com/celynw/ha-addons/tree/main/asknavidrome",
 	"version": "0.8",
-	"webui": "[PROTO:ssl]//[HOST]:[PORT:5000]"
+	"webui": "[PROTO:ssl]://[HOST]:[PORT:5000]"
 }
