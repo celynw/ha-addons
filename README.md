@@ -18,7 +18,7 @@ Use the following URL to add this repository: https://github.com/celynw/ha-addon
 ✓ [Navidrome](navidrome/): Modern Music Server and Streamer compatible with Subsonic/Airsonic
 
 &emsp;&emsp;![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcelynw%2Fha-addons%2Fmaster%2Fnavidrome%2Fconfig.json)
-[![Upstream](https://img.shields.io/github/v/release/navidrome/navidrome?label=Upstream)](https://github.com/navidrome/navidrome/tree/v0.51.1)
+[![Upstream](https://img.shields.io/github/v/release/navidrome/navidrome?label=Upstream)](https://github.com/navidrome/navidrome/releases/latest)
 ![aarch64][aarch64-badge]
 ![amd64][amd64-badge]
 ![armv7][armv7-badge]
@@ -26,7 +26,7 @@ Use the following URL to add this repository: https://github.com/celynw/ha-addon
 ✓ [AskNavidrome](asknavidrome/): An Alexa skill to allow streaming of music from Subsonic API compatible media servers on Amazon Echo devices
 
 &emsp;&emsp;![Version](https://img.shields.io/badge/dynamic/json?label=Version&query=%24.version&url=https%3A%2F%2Fraw.githubusercontent.com%2Fcelynw%2Fha-addons%2Fmaster%2Fasknavidrome%2Fconfig.json)
-[![Upstream](https://img.shields.io/github/v/release/rosskouk/asknavidrome?label=Upstream)](https://github.com/rosskouk/asknavidrome/tree/v0.8)
+[![Upstream](https://img.shields.io/github/v/release/rosskouk/asknavidrome?label=Upstream)](https://github.com/rosskouk/asknavidrome/releases/latest)
 ![aarch64][aarch64-badge]
 ![amd64][amd64-badge]
 ![armv7][armv7-badge]
