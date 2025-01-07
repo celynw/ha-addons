@@ -1,5 +1,168 @@
 # Changelog
 
+## [v0.54.1](https://github.com/navidrome/navidrome/releases/tag/v0.54.1)
+
+Update to latest version from `navidrome/navidrome`
+
+We are thrilled to announce the release of **Navidrome version 0.54.1**! This update introduces several new features, enhancements, and important bug fixes to elevate your music streaming experience. (Yes, ChatGPT is our new Public Relations intern 😄)
+
+## 🔐 Important Security Bugfix
+
+**JWT secrets are now stored encrypted in the Database**. A CVE Advisory will be published soon.
+
+## 🎉 Noteworthy New Features
+
+### 📊 Anonymous Usage Data Collection
+As discussed with the community (in Discord and Reddit), Navidrome now includes **anonymous usage data collection** (opt-out) to help us understand how you interact with the application. This data assists in improving features and performance while ensuring your privacy is respected. For details on what is collected and how, read [this](https://www.navidrome.org/docs/getting-started/insights/). 
+
+For the TL;DR opt-out instructions, set the new config option (or env var) to (but we really hope you consider leaving it enabled — your participation will be much appreciated).
+
+### 🖥️ Enhanced Packaging Support
+**New MSI Installer**: Thanks to @mintsoft for creating a MSI installer, for a smoother and more reliable installation process on Windows platforms.
+
+**Linux Package Installer**: And thanks to @kgarner7, we now distribute and packages for Navidrome, which automatically install it as a service on compatible Linux distributions.
+
+**Apple Silicon Binaries**: We finally offer ARM builds for macOS, optimized for the Apple processors.
+
+### 🔄 Native Backup and Restore
+Introducing a **native automatic backup mechanism** (thanks again, @kgarner7), making it easier than ever to safeguard your music library. Check the backup options in the [configuration documentation](https://www.navidrome.org/docs/usage/configuration-options/). More documentation to follow.
+
+### 🎨 Artists from Last.fm
+Navidrome now also fetches **artist images directly from Last.fm**. No need to create a Spotify account anymore :)
+
+### 🎧 User Interface Improvements
+**Drag-and-Drop Playlists**: You can now **drag and drop song titles** from the player directly to the sidebar playlist, making playlist management more intuitive and efficient.
+
+### 🌟 Navidrome Guru on Gurubase.io
+We’ve partnered with [Gurubase.io](https://gurubase.io/) to bring you [Navidrome Guru](https://gurubase.io/g/navidrome). Now you can chat with an AI that is (almost) expert on Navidrome configuration and issues. More information is being added to it everyday, so it will only get better. Give it a try and let us what is missing and how it can improve.
+
+### ⚙️ Other Improvements 
+
+And as usual, lots of bug fix and improvements. For more details look at the complete changelog.
+
+## Changelog
+### New Features
+* 8e2052ff95d5695a79f139793ae9b2bfeefe03f5: feat(Insights): add anonymous usage data collection (#3543) (@deluan)
+* 9c3b4561652a15846993d477003e111f0df0c585: feat(build): MSI installer improvements (#3376) (@mintsoft)
+* 8fb09e71b6c982a9650e352fdc2a665a687b368a: feat(server): get artist images from Last.fm (@deluan)
+* 55730514ea59d5f1d0b8e3f8745569c29bdbf7b4: feat(server): provide native backup/restore mechanism (#3194) (@kgarner7)
+* 06c9c1e64a14d31d971339217d0940199b46d81f: feat(server): require explicitly enabling reverse proxy auth for unix sockets (#3062) (@crazygolem)
+* 0a650de357babdcc8ce910fe37fee84acf4ed2fe: feat(subsonic): add MusicBrainz ID and Sort Name to getArtists (@kgarner7)
+* 23bebe4e06124becf1000e88472ae71a6ca7de4c: feat(subsonic): getOpenSubsonicExtensions is now public (@deluan)
+* 8b5af676474871508dc73ff4e60b625705ac3dfa: feat(subsonic): support OS clearing play queue (#3399) (@deluan)
+* 0281d06b011d29962d210cdb0f11fb5c6197dabc: feat(ui): Allow drag-and-drop song title from player to sidebar playlist (#2435) (@Egor3f)
+* a9334b7787bd4cfe18bb329654e28b0702004127: feat(ui): show user's lastAccess (#3342) (@deluan)
+* 768160b05e9929bf5d82359b7768e67ffffeb9b6: feat: Windows MSI installer and service support (#3125) (@mintsoft)
+* 9ae898d071e32cf56261f3b13a639fd01092c201: feat: add Navidrome Guru on Gurubase.io (#3491) (@kursataktas)
+* cd0cf7c12be08d8035c038138d25e3f6431df021: feat: cache login background images (#3462) (@deluan)
+### Bug fixes
+* 851f54ea5741990d7df359a3f9df6fb7a91a084c: fix(ci): fix linux packages upload (#3569) (@deluan)
+* 6bc4c0317f024fbc6cb8ce056e04fad567d9d2c7: fix(insights): better status (@deluan)
+* 906ac635c296acacd9e560409c09236ca3d64aaa: fix(insights): check if running in a container (@deluan)
+* 6c11649b06afdf0bc9b8303c8c791ae5aecc698c: fix(insights): fix issues and improve reports (#3558) (@deluan)
+* 82633d7490df13b825a01164afe1be4f7d2d0a66: fix(playlists): make the m3u parser case-insensitive again #3410 (@caiocotts)
+* 92a1f19271ded3cb363b228f0a850a7205e81cf4: fix(scanner): make activity panel update rate configurable (@deluan)
+* 28668782c61b85f6f6f08ff7b57f7a8e2c8c08d0: fix(server): FFmpegPath can contain spaces (@deluan)
+* 627417dae33eda27e1dcc3072bde832c2bb4061e: fix(server): add disc number to fake path. (@deluan)
+* 8808eadddaa517ab58ce33a70d08f37b0ffdef0e: fix(server): allow extra spaces in transcoding commands (@deluan)
+* 9cbdb20a318a49daf95888b1fd207d4d729b55f1: fix(server): don't try to save JWT if it fails to encrypt (@deluan)
+* 7f030b0859653593fd2ac0df69f4a313f9caf9ff: fix(server): encrypt jwt secret at rest (@deluan)
+* fcb5e1b80624ecb8b7e1d80656f799f0cb2b80f9: fix(server): fix case-insensitive sort order and add indexes to improve performance (#3425) (@deluan)
+* 177a1f853f1e1fe55f2b951873a12c634fa851ce: fix(server): more race conditions when updating artist/album from external sources (@deluan)
+* 2b0bfbd75addb2ba7480ef9e7398c64738c29614: fix(server): race condition when updating artist/album from external sources (@deluan)
+* 3e47819f7abbc6e14409e855a9f1cbc62dc69e30: fix(server): reduce album placeholder image size by converting it to webp (@deluan)
+* 3fda7445b02bc54302295d9a78bf604fdac641bc: fix(server): try to find proper embedded front cover - only for vorbis comments for now (#3348) (@deluan)
+* b7285b28cf7118165dea732a4077ad53f800d0ac: fix(test): vitest was hanging due to vite-plugin-eslint plugin (@deluan)
+* cbf5e3d51b27aa01b802e436272d5be9de713b78: fix(ui): PWA not updating properly in new Vite config (#3493) (@deluan)
+* dcc84e29d962820efd219ec4e7d2ad1b50c6e022: fix(ui): Update Chinese (simplified) Translation (#3490) (@qx100)
+* 32afe9698cc51e815939b0377dff3ba215b63274: fix(ui): completed the translation of zh-Hant and zh-Hans (#3450) (@york9675)
+* 2d8507cfd72656609d3b38487dc6053f4090ed3d: fix(ui): don't hide Last.fm scrobble switch (#3561) (@deluan)
+* 4f8cd5307cf5f387bbf14bd4647ef3324facc90f: fix(ui): fix play queue for play button and context menus (#3559) (@caiocotts)
+* 1a36f06147628e3b1f976135c300d16305dc9371: fix(ui): service worker crashing on precacheAndRoute (#3528) (@kgarner7)
+* 0232afd98d3d40f42a0bf3aed64f736bb0308666: fix(ui): service worker does not load new version of ui (#3402) (@deluan)
+* 04f296cc734cd99707e9cb0060dbc9a4dee5e8c5: fix(ui): show last.fm api-key missing in a (@deluan)
+* 0d520dea2d117e014979c44257b94d3e3713d292: fix(ui): update Basque (#3542) (@xabirequejo)
+* de04393b47ff65acce629bb25b3aa77859cd1bcd: fix(ui): update German translation (#3345) (@Lokke)
+* 640a734896fd255fce8b751c9465c4397413a0c0: fix(ui): update Hungarian translation (#3346) (@ChekeredList71)
+* a358d107aaaa1143947a5708ca27d9e472c9e6c5: fix(ui): update Serbian translation (#3361) (@eevan78)
+* 3e7c4b6f70ea0e8b75912490e7e3585e4a86abd8: fix(ui): update Turkish, Galician and Polish translations from POEditor (#3426) (@deluan)
+* 3713032f57eea19ffb2ce96bacb497e471b8f395: fix(ui): update translations from POEditor (#3349) (@deluan)
+* 72a0f59be316df7e0b4c7be91a82e277552a55ac: fix(ui): update translations from POEditor (#3568) (@deluan)
+* ae6499b941542964ed41743e4edd03f5ff50a7d3: fix: PRs should not try to push to docker (#3393) (@deluan)
+* 16d1314a680bff39641e76f3b8f8e9f7c00f9020: fix: do not add nil filters (#3394) (@deluan)
+* 943b456d3f3f34bd8b39c5a398c2862733f10fd9: fix: do not try to push to ghcr.io without proper permissions (#3395) (@deluan)
+* 6c6223f2f9db2c8c253e0d40a192e3519c9037d1: fix: forcing transcoding when client does not specify transcoding options (#3455) (@deluan)
+* ccce1c0f6dbff1497fb76b830f92654e1a386458: fix: pre-cache square images, or else they are not useful for the Album Grid (@deluan)
+* 9c46e2b2622e7ed4fb3a068f92e98efe928fe0dd: fix: use docker buildx, as required by Linux (@deluan)
+* 00c6a0ed1f3c7a27f3d3a027c4a2723b1f3f7fc4: fix: use target platform to build final image (#3397) (@deluan)
+* bbb3182bc97605020af5b4a76efc58a3cf2a7b88: refactor(server): remove ffmpeg unused code (@deluan)
+### Documentation updates
+* 21dd04cb7db557f2d7e44c50f1b467fe04c8feec: docs: set org.opencontainers.image.source label in Dockerfile (#3564) (@dmarcoux)
+### Build process updates
+* af1add43121937cc0520e910b0b569c9cc09bd32: Revert "build: new pipeline, new way to cross-compile and build docker images locally. (#3383)" (@deluan)
+* d9fa19dab32e2c177a18956dbf51c7c4934e0337: build(ci): bump goreleaser to 2.3.2 (@deluan)
+* 9e5849e4dc9852f18cae5746f1ba647619054420: build(dependabot): add docker configuration (@deluan)
+* 69e2a6d6209487903dd8b6cb0119c9e1cfa2cf7d: build(netgo): make sure the project is always compiled with build tag (#3428) (@deluan)
+* fcdd30ba8fbba7ed296d6ab003396103481d5110: build(ui): migrate from CRA/Jest to Vite/Vitest (#3311) (@deluan)
+* 154e13f7c910cbf429daef1c1049c3b75478d9c7: build: add packages for deb and rpm to release (#3202) (@kgarner7)
+* 5f6a90e5aa66103d74397e89c0a3205995fdbf58: build: fix build on FreeBSD (#3403) (@jan666)
+* b14c7906411b896f507181ac9e53c57b6920152a: build: new pipeline, new way to cross-compile and build docker images locally. (#3383) (@deluan)
+* 214287e00dd64f31f6ab24b940f5d9e057a7c647: build: new pipeline, new way to cross-compile and build docker images locally. (#3388) (@deluan)
+* 9d8c49750e7800208482bd11478cbda411ce4bbf: ci: ignore refactor commits in release notes (@deluan)
+### Other work
+* 297f72ff1a679d1308e7b733be649ab2795bdcf7: chore(deps): bump Alpine version (@deluan)
+* 6e5eea980d35934f76516c23ed5ad404df26e352: chore(deps): bump Go dependencies (@deluan)
+* faed2ea8d765f5b152ee3ad43e07dcf90f6bb51f: chore(deps): bump Go dependencies (@deluan)
+* 181c29613f55c9e92370503b87d3ca5ce43d9fca: chore(deps): bump Go dependencies (@deluan)
+* 2bb918f8a117cc3f527198e781b1becc13f6f6d5: chore(deps): bump Go dependencies (@deluan)
+* 3671598121742c1263dd2818c55bb3e8cc89f519: chore(deps): bump Go dependencies (@deluan)
+* 94bc1a1d4138572f38364f9313158d1bce1b1c0b: chore(deps): bump Go dependencies (@deluan)
+* eab6aadc0f83f65cf6537e80e61de97907e88672: chore(deps): bump Go to 1.23.2 (@deluan)
+* 6ff7ab52f4a62e65d59b6c6eb9b9f47eb976c43b: chore(deps): bump JS dependencies (@deluan)
+* 1c0ebb946076a9c3ed018f1cb2c5ffc6135cff46: chore(deps): bump JS dependencies (@deluan)
+* c952dc343afb7e9e64acaf1a1b64d87ac13a57cf: chore(deps): bump JS dependencies (@deluan)
+* 44bc70b26953e896fd33fcad3ec854bb95d096df: chore(deps): bump JS dependencies (@deluan)
+* 6040a502976a86db87096b5d64e4d7de9966cf72: chore(deps): bump alpine from 3.18 to 3.20 in /.github/workflows (#3326) (@dependabot[bot])
+* dd48a23f92530646415c24f6c9ee9a29f61bcdee: chore(deps): bump github.com/unrolled/secure from 1.15.0 to 1.16.0 (#3327) (@dependabot[bot])
+* 075a7e26404fab17ad4d67a81f5b38cf28b22d2d: chore(deps): bump go dependencies (@deluan)
+* cf69df877a713608a2a67644dbbe9e05cebdb43b: chore(deps): bump js dependencies (@deluan)
+* 270ae3549df165e7dd4b465e0ba2f6b2944aa954: chore(deps): bump peter-evans/create-pull-request from 6 to 7 (@deluan)
+* bc3576e092597b2f3c9ef28483e892f17b2d81ae: chore(deps): bump prettier (@deluan)
+* ed3ab5385dd867fb0394c95dcce8aa8bfd7f5551: chore(deps): bump rollup from 2.79.1 to 2.79.2 in /ui (@deluan)
+* a9b301dfc50910b0ab426cd40a03cd163c111725: chore(deps-dev): bump @testing-library/jest-dom in /ui (#3418) (@dependabot[bot])
+* 936af2d895e34bab6c675bcde8204ed6e855c020: chore(deps-dev): bump @types/node from 22.6.1 to 22.7.4 in /ui (#3335) (@dependabot[bot])
+* bc4aa55de3cce310ef14f1e33d627a06a53600cd: chore(deps-dev): bump @types/node from 22.7.4 to 22.7.5 in /ui (#3378) (@dependabot[bot])
+* b86a69567d25f1390dda04972b6cb3d49d804000: chore(deps-dev): bump @types/node from 22.7.6 to 22.7.7 in /ui (#3417) (@dependabot[bot])
+* 67474b776cf01f9b15eea05b3e9b49fb0211d63c: chore(deps-dev): bump @vitejs/plugin-react from 4.3.2 to 4.3.3 in /ui (#3415) (@dependabot[bot])
+* b2eb5330826177978770a278ba617ac430878f7f: chore(deps-dev): bump @vitejs/plugin-react-swc in /ui (#3339) (@dependabot[bot])
+* fd81039f1b76db2f082766d82c6bd1ab73c51aa1: chore(deps-dev): bump @vitest/coverage-v8 from 2.1.1 to 2.1.3 in /ui (#3379) (@dependabot[bot])
+* 15b2dc6b486acb7938b6060aad8449b039a3409b: chore(deps-dev): bump eslint-plugin-jsx-a11y in /ui (#3416) (@dependabot[bot])
+* 5e8085bf3ce85a3bf7b46065585449c53593ca10: chore(deps-dev): bump eslint-plugin-react from 7.36.1 to 7.37.0 in /ui (#3334) (@dependabot[bot])
+* ff79ac4336b6d6a5ded313539381e83d2d1c715f: chore(deps-dev): bump eslint-plugin-react from 7.37.0 to 7.37.1 in /ui (#3362) (@dependabot[bot])
+* 8d37781a47d22a5da6cb2ac550afa29aeaca68c5: chore(deps-dev): bump eslint-plugin-react-hooks in /ui (#3381) (@dependabot[bot])
+* 1c48a5575920ca66fc19e08ca0579f4b939ad748: chore(deps-dev): bump eslint-plugin-react-refresh in /ui (#3419) (@dependabot[bot])
+* a6fb7fd705e337f7d3b5fda162da8950f8233964: chore(deps-dev): bump typescript from 5.6.2 to 5.6.3 in /ui (#3380) (@dependabot[bot])
+* b1c18a428bea161c9abc31fa3a4fadf068a292e3: chore(deps-dev): bump vite from 5.4.7 to 5.4.8 in /ui (#3340) (@dependabot[bot])
+* 6ec6ac1595e7b3ce77bf18ffe9fbdbdceaddd859: chore(deps-dev): bump vite from 5.4.8 to 5.4.9 in /ui (#3382) (@dependabot[bot])
+* 1fac9cc3ee2c4168f96e582b941c46b63cd270a2: chore: add poeditor logo to readme (#3329) (@deluan)
+* 054946dc42304edbbc25b64f602da43998cced57: chore: update sanitize with updated diacritics (@deluan)
+* 97c06aba1a49cb51836aa73227c175deafada405: perf(server): add index for sort tags. (@deluan)
+* 3982ba725883e71d4e3e618c61d5140eeb8d850a: revert: separation of write and read DBs (@deluan)
+
+**Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.3...v0.54.1
+
+## Helping out
+
+This release was only possible thanks to the support of some **awesome people**!
+
+Want to be one of them?
+You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
+
+## Where to go next?
+
+* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
+* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
+
 ## [v0.53.3](https://github.com/navidrome/navidrome/releases/tag/v0.53.3)
 
 Update to latest version from `navidrome/navidrome`
