@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.52.5
+## [v0.52.5](https://github.com/navidrome/navidrome/releases/tag/v0.52.5)
 
 Update to latest version from `navidrome/navidrome`
 
@@ -72,13 +72,13 @@ This is mostly a bug-fix version, with focus on some Jukebox issues, but also ot
 * 27875ba2 Load mime_types from external file
 * 28f7ef43 Remove AlbumPlayCountMode from command line options
 
-## v0.52.0
+## [v0.52.0](https://github.com/navidrome/navidrome/releases/tag/v0.52.0)
 
 Update to latest version from `navidrome/navidrome`
 
 ### New in this release
 
-This release upgrades [TagLib to 2.0](https://github.com/taglib/taglib/releases/tag/v2.0), improving tag importing in general.
+This release upgrades [TagLib to 2.0.1](https://github.com/taglib/taglib/releases/tag/v2.0), improving tag importing in general.
 Also general improvements to Jukebox mode, Reverse Proxy authentication, more OpenSubsonic compatibility,
 and a few bug fixes.
 
@@ -100,7 +100,7 @@ and a few bug fixes.
 
 Full changelog: https://github.com/navidrome/navidrome/compare/v0.51.1...v0.52.0
 
-## v0.51.1
+## [v0.51.1](https://github.com/navidrome/navidrome/releases/tag/v0.51.1)
 
 Initial release using latest release from `navidrome/navidrome`
 
