@@ -1,5 +1,38 @@
 # Changelog
 
+## [v0.54.3](https://github.com/navidrome/navidrome/releases/tag/v0.54.3)
+
+Update to latest version from `navidrome/navidrome`
+
+## Changelog
+### Bug fixes
+* 1eedee9086e5a61b9ef3c9d2402252bc6207e846: fix(insights): add more linux fs types (@deluan)
+* 51eed74a0efd58a2062a502fe16e65bf6acfc47a: fix(release): change owner of cache to Navidrome user (#3599) (@kgarner7)
+* 0299e488b5d28f08daf42eb02aa3d2fd03477d3a: fix(server): backup and restore issues from the cli (#3579) (@deluan)
+* 630c3040805fa53d653ad8792d13991510659d76: fix(server): typo in backup prune message (#3582) (@whorfin)
+* f0302525a700d801864c41cfbbe016ba5cf75f97: fix(server): use cancellable context instead of Sleep for initial insights delay (#3593) (@kgarner7)
+* 734eb30ac5f0a370d332b836a096c2e6bfab7598: fix(ui): update Suomi, Polski, Türkçe translations from POEditor (#3592) (@deluan)
+### Build process updates
+* 0bebd396dfa143fc46df1041bcf7f2908ec1474a: build(ci): use the head commit sha in PR versions (@deluan)
+### Other work
+* 3942275689b3044de8fb68379f2fa3e78516ca88: chore(deps): bump github.com/andybalholm/cascadia from 1.3.2 to 1.3.3 (@deluan)
+* 98b038c1fbc6b8b78b22a98923e167579a1b421f: chore(deps): upgrade golang.org/x/net (CVE-2024-45338) (@deluan)
+
+**Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.54.2...v0.54.3
+
+## Helping out
+
+This release is only possible thanks to the support of some **awesome people**!
+
+Want to be one of them?
+You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan), or [contribute with code](https://www.navidrome.org/docs/developers/).
+
+## Where to go next?
+
+* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
+* Host Navidrome on [PikaPods](https://www.pikapods.com/pods/navidrome) for a simple cloud solution.
+* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
+
 ## [v0.54.2](https://github.com/navidrome/navidrome/releases/tag/v0.54.2)
 
 Update to latest version from `navidrome/navidrome`
