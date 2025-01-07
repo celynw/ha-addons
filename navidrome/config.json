@@ -77,6 +77,7 @@
 		"ND_ENABLEFAVOURITES": true,
 		"ND_LISTENBRAINZ_ENABLED": true,
 		"ND_ENABLESHARING": false,
+		"ND_SHAREURL": "",
 		"ND_ENABLEGRAVATAR": false,
 		"ND_SPOTIFY_ID": "",
 		"ND_SPOTIFY_SECRET": "",
@@ -91,9 +92,12 @@
 		"ND_SESSIONTIMEOUT": "30m",
 		"ND_UIWELCOMEMESSAGE": "",
 		"ND_UILOGINBACKGROUNDURL": true,
+		"ND_DEFAULTPLAYLISTPUBLICVISIBILITY": false,
+		"ND_SMARTPLAYLISTREFRESHDELAY": "5s",
 		"PUID": 0,
 		"PGID": 0,
-		"ND_LOGLEVEL": "info"
+		"ND_LOGLEVEL": "info",
+		"ND_ENABLEINSIGHTSCOLLECTOR": true
 	},
 	"panel_icon": "mdi:record-circle-outline",
 	"ports": {
@@ -112,6 +116,7 @@
 		"ND_ENABLEFAVOURITES": "bool",
 		"ND_LISTENBRAINZ_ENABLED": "bool",
 		"ND_ENABLESHARING": "bool",
+		"ND_SHAREURL": "str?",
 		"ND_ENABLEGRAVATAR": "bool",
 		"ND_SPOTIFY_ID": "str?",
 		"ND_SPOTIFY_SECRET": "str?",
@@ -126,9 +131,12 @@
 		"ND_SESSIONTIMEOUT": "str",
 		"ND_UIWELCOMEMESSAGE": "str?",
 		"ND_UILOGINBACKGROUNDURL": "bool",
+		"ND_DEFAULTPLAYLISTPUBLICVISIBILITY": "bool",
+		"ND_SMARTPLAYLISTREFRESHDELAY": "str",
 		"PUID": "int",
 		"PGID": "int",
-		"ND_LOGLEVEL": "list(error|warn|info|debug|trace)"
+		"ND_LOGLEVEL": "list(error|warn|info|debug|trace)",
+		"ND_ENABLEINSIGHTSCOLLECTOR": "bool"
 	},
 	"slug": "navidrome",
 	"url": "https://github.com/celynw/ha-addons/tree/main/navidrome",
