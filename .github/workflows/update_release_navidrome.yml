@@ -1,0 +1,106 @@
+name: Update Navidrome
+
+on:
+  schedule:
+    - cron: 0 0 * * * # Runs every day at midnight
+  workflow_dispatch:
+    inputs:
+      version:
+        description: Manual version (e.g. v0.42.0)
+        required: false
+        default: ""
+
+jobs:
+  update_files:  # Should be under different jobs?
+    runs-on: ubuntu-latest
+    name: Check for update and update files
+
+    steps:
+    - name: Get latest release version
+      id: get_latest_release
+      if: ${{ github.event.inputs.version == '' }}
+      uses: octokit/request-action@v2.x
+      with:
+        route: GET /repos/navidrome/navidrome/releases/latest
+        mediaType: |
+          format: json
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Extract tag from JSON
+      id: process_json
+      if: ${{ github.event.inputs.version == '' }}
+      run: |
+        version=$(echo '${{ steps.get_latest_release.outputs.data }}' | jq -r '.tag_name')
+        echo "version=${version#v}" >> $GITHUB_ENV
+        echo "Version: ${version}" >> $GITHUB_STEP_SUMMARY
+
+    - name: "[Workflow dispatch] Set version manually"
+      id: set_version_manually
+      if: ${{ github.event.inputs.version != '' }}
+      run: |
+        echo "version=${version#v}" >> $GITHUB_ENV
+        echo "Version: ${version}" >> $GITHUB_STEP_SUMMARY
+
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Check if we need to update
+      id: check_version
+      run: |
+        current_version=$(cat navidrome/config.json | jq -r '.version')
+        if [[ "${current_version}" == "${{ env.version }}" ]]; then
+          echo "No new version found" >> $GITHUB_STEP_SUMMARY
+          exit 1
+        fi
+
+    - name: Update Dockerfile
+      run: |
+        sed -i "s/ARG BUILD_UPSTREAM=.*/ARG BUILD_UPSTREAM=${{ env.version }}/" navidrome/Dockerfile
+
+    - name: Update build.json
+      run: |
+        jq --tab --arg version "${{ env.version }}" '.build_from |= map_values("navidrome/navidrome:" + $version)' navidrome/build.json > navidrome/build.json.tmp
+        mv navidrome/build.json.tmp navidrome/build.json
+
+    - name: Update config.json
+      run: |
+        jq --tab --arg version "${{ env.version }}" '.version = $version' navidrome/config.json > navidrome/config.json.tmp
+        mv navidrome/config.json.tmp navidrome/config.json
+
+    - name: Get upstream release notes
+      id: get_release_notes
+      uses: octokit/request-action@v2.x
+      with:
+        route: GET /repos/navidrome/navidrome/releases/tags/v${{ env.version }}
+        mediaType: |
+          format: markdown
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Update CHANGELOG.md
+      run: |
+        release_notes=$(
+          cat <<EOF | jq -r '.body'
+        ${{ steps.get_release_notes.outputs.data }}
+        EOF
+        )
+        updated_release_notes=$(echo "$release_notes" | sed '1d' | awk '{$1=$1;print}')
+        awk -v new_notes="$(printf '## [v%s](https://github.com/navidrome/navidrome/releases/tag/v%s)\n\nUpdate to latest version from `navidrome/navidrome`\n\n%s\n' "$version" "$version" "$updated_release_notes" | sed 's/[&/\]/\\&/g')" '
+          NR==2 { print; print new_notes; next }
+          { print }
+        ' navidrome/CHANGELOG.md > navidrome/CHANGELOG.md.tmp
+        mv navidrome/CHANGELOG.md.tmp navidrome/CHANGELOG.md
+
+    - name: Set up Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+    - name: Commit and push changes
+      run: |
+        git add navidrome/Dockerfile navidrome/build.json navidrome/config.json navidrome/CHANGELOG.md
+        git commit -m "Update to upstream release ${{ env.version }}"
+        git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
