@@ -86,7 +86,7 @@ jobs:
         ${{ steps.get_release_notes.outputs.data }}
         EOF
         )
-        updated_release_notes=$(echo "$release_notes" | sed '1d' | awk '{$1=$1;print}')
+        updated_release_notes=$(echo "$release_notes" | awk '{$1=$1;print}')
         awk -v new_notes="$(printf '## [v%s](https://github.com/navidrome/navidrome/releases/tag/v%s)\n\nUpdate to latest version from `navidrome/navidrome`\n\n%s\n' "$version" "$version" "$updated_release_notes" | sed 's/[&/\]/\\&/g')" '
           NR==2 { print; print new_notes; next }
           { print }
