@@ -1,5 +1,41 @@
 # Changelog
 
+## [v0.53.3](https://github.com/navidrome/navidrome/releases/tag/v0.53.3)
+
+Update to latest version from `navidrome/navidrome`
+
+## Changelog
+### Bug fixes
+* 76614b8f1611731ab222fb907ebd47ac34e53528: fix(scanner): update lib.LastScanAt on each rescan (#3313) (@deluan)
+* 5be73d404f897892b4fad98248c52d1eabd73e7a: fix(server): allow changing local login background url (@deluan)
+* 13af8ed43ac42cfbcc19588c39ad0e65c7733bc6: fix(server): preserve m3u file order on import (#3314) (@kgarner7)
+* 80acfc103f72ed810014713a96e7e807a8e0bc19: fix(server): throttle events sent to UI when scanning. Relates to #1511 (@deluan)
+* d31952f46941adfa692525066d62474a16c64f00: fix(ui): avoid invalid requests after logoff (@deluan)
+* 782cd26b3dbcff06cd2eb3a9b71c1d67c4b74913: fix(ui): save play mode for player (#3315) (@kgarner7)
+* 32d2d7c15b64d1749ab543659ddc4e17fd52deae: fix(ui): update Basque translation (#3306) (@xabirequejo)
+* 1fa245d141852d26837acd1c7fcf9dca0bd36174: fix(ui): update Swedish translation (#3316) (@andylundqvist)
+### Other work
+* 84dc10529d3194505b173c582e3015dc9c47f414: chore(deps): bump github.com/prometheus/client_golang from 1.20.3 to 1.20.4 (#3301) (@dependabot[bot])
+* 6031d97c9da58a6b4c54f74e6d674d7cb07c6683: chore(deps): bump rollup from 2.79.1 to 2.79.2 in /ui (#3319) (@dependabot[bot])
+* 24d911744e606b7cb5bbf3d2ccd4f56df1db8747: chore(deps): bump github.com/pressly/goose/v3 from 3.22.0 to 3.22.1 (#3302) (@dependabot[bot])
+* 825cbcbf5380a487bcbab93b5a7d2b3b1673774c: chore(readme): reddit badge is working again. (@deluan)
+* 669c8f4c49a7ef51ac9a53c725097943f67219eb: refactor(server): replace RangeByChunks with Go 1.23 iterators (#3292) (@deluan)
+* 10a1b5faf88289a6e2e236b20cbd28c0e0a70eaf: test(scanner): remove redundant fixture file (@deluan)
+
+**Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.2...v0.53.3
+
+## Helping out
+
+This release is only possible thanks to the support of some **awesome people**!
+
+Want to be one of them?
+You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
+
+## Where to go next?
+
+* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
+* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
+
 ## [v0.53.2](https://github.com/navidrome/navidrome/releases/tag/v0.53.2)
 
 Update to latest version from `navidrome/navidrome`
