@@ -4,65 +4,47 @@
 
 Update to latest version from `navidrome/navidrome`
 
-## Changelog
 ### Bug fixes
+
 * 1eedee9086e5a61b9ef3c9d2402252bc6207e846: fix(insights): add more linux fs types (@deluan)
 * 51eed74a0efd58a2062a502fe16e65bf6acfc47a: fix(release): change owner of cache to Navidrome user (#3599) (@kgarner7)
 * 0299e488b5d28f08daf42eb02aa3d2fd03477d3a: fix(server): backup and restore issues from the cli (#3579) (@deluan)
 * 630c3040805fa53d653ad8792d13991510659d76: fix(server): typo in backup prune message (#3582) (@whorfin)
 * f0302525a700d801864c41cfbbe016ba5cf75f97: fix(server): use cancellable context instead of Sleep for initial insights delay (#3593) (@kgarner7)
 * 734eb30ac5f0a370d332b836a096c2e6bfab7598: fix(ui): update Suomi, Polski, Türkçe translations from POEditor (#3592) (@deluan)
+
 ### Build process updates
+
 * 0bebd396dfa143fc46df1041bcf7f2908ec1474a: build(ci): use the head commit sha in PR versions (@deluan)
+
 ### Other work
+
 * 3942275689b3044de8fb68379f2fa3e78516ca88: chore(deps): bump github.com/andybalholm/cascadia from 1.3.2 to 1.3.3 (@deluan)
 * 98b038c1fbc6b8b78b22a98923e167579a1b421f: chore(deps): upgrade golang.org/x/net (CVE-2024-45338) (@deluan)
 
 **Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.54.2...v0.54.3
 
-## Helping out
-
-This release is only possible thanks to the support of some **awesome people**!
-
-Want to be one of them?
-You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan), or [contribute with code](https://www.navidrome.org/docs/developers/).
-
-## Where to go next?
-
-* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
-* Host Navidrome on [PikaPods](https://www.pikapods.com/pods/navidrome) for a simple cloud solution.
-* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
-
 ## [v0.54.2](https://github.com/navidrome/navidrome/releases/tag/v0.54.2)
 
 Update to latest version from `navidrome/navidrome`
 
-## Changelog
 ### Bug fixes
+
 * 99dfb832eb679d230f1b22d96edc86bf88055a7a: fix(insights): get Windows version (@deluan)
 * c8f174ea8477047ea7c5c4165f0f5b376e367cc1: fix(server): change log level for some last.fm warnings (@deluan)
 * 8880f6703585bb7eb7794a0b60383f3d75dddb76: fix(ui): update Español, Français, Svenska translations from POEditor (#3576) (@deluan)
 * 972229d1e8a7bda984d9a1c7f0080ef6f1d2b598: fix(ui): update Hungarian translation (#3574) (@ChekeredList71)
+
 ### Build process updates
+
 * d4dc8180a26e8d567c3edff4a9f959dcb758312e: build(ci): fix release version label and package names (#3573) (@deluan)
 * 0b184893278620bb421a85c8b47df36900cd4df7: build(poeditor): change commit message for translation update PRs (@deluan)
+
 ### Other work
+
 * 51c16aa69fa91cea4d00d648bbe1599a45e3533e: chore: add PikaPods to release notes (@deluan)
 
 **Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.54.1...v0.54.2
-
-## Helping out
-
-This release is only possible thanks to the support of some **awesome people**!
-
-Want to be one of them?
-You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan), or [contribute with code](https://www.navidrome.org/docs/developers/).
-
-## Where to go next?
-
-* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
-* Host Navidrome on [PikaPods](https://www.pikapods.com/pods/navidrome) for a simple cloud solution.
-* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
 
 ## [v0.54.1](https://github.com/navidrome/navidrome/releases/tag/v0.54.1)
 
@@ -70,42 +52,48 @@ Update to latest version from `navidrome/navidrome`
 
 We are thrilled to announce the release of **Navidrome version 0.54.1**! This update introduces several new features, enhancements, and important bug fixes to elevate your music streaming experience. (Yes, ChatGPT is our new Public Relations intern 😄)
 
-## 🔐 Important Security Bugfix
+### 🔐 Important Security Bugfix
 
 **JWT secrets are now stored encrypted in the Database**. A CVE Advisory will be published soon.
 
-## 🎉 Noteworthy New Features
+### 🎉 Noteworthy New Features
 
-### 📊 Anonymous Usage Data Collection
-As discussed with the community (in Discord and Reddit), Navidrome now includes **anonymous usage data collection** (opt-out) to help us understand how you interact with the application. This data assists in improving features and performance while ensuring your privacy is respected. For details on what is collected and how, read [this](https://www.navidrome.org/docs/getting-started/insights/). 
+#### 📊 Anonymous Usage Data Collection
+
+As discussed with the community (in Discord and Reddit), Navidrome now includes **anonymous usage data collection** (opt-out) to help us understand how you interact with the application. This data assists in improving features and performance while ensuring your privacy is respected. For details on what is collected and how, read [this](https://www.navidrome.org/docs/getting-started/insights/).
 
 For the TL;DR opt-out instructions, set the new config option (or env var) to (but we really hope you consider leaving it enabled — your participation will be much appreciated).
 
-### 🖥️ Enhanced Packaging Support
+#### 🖥️ Enhanced Packaging Support
+
 **New MSI Installer**: Thanks to @mintsoft for creating a MSI installer, for a smoother and more reliable installation process on Windows platforms.
 
 **Linux Package Installer**: And thanks to @kgarner7, we now distribute and packages for Navidrome, which automatically install it as a service on compatible Linux distributions.
 
 **Apple Silicon Binaries**: We finally offer ARM builds for macOS, optimized for the Apple processors.
 
-### 🔄 Native Backup and Restore
+#### 🔄 Native Backup and Restore
+
 Introducing a **native automatic backup mechanism** (thanks again, @kgarner7), making it easier than ever to safeguard your music library. Check the backup options in the [configuration documentation](https://www.navidrome.org/docs/usage/configuration-options/). More documentation to follow.
 
-### 🎨 Artists from Last.fm
+#### 🎨 Artists from Last.fm
+
 Navidrome now also fetches **artist images directly from Last.fm**. No need to create a Spotify account anymore :)
 
-### 🎧 User Interface Improvements
+#### 🎧 User Interface Improvements
+
 **Drag-and-Drop Playlists**: You can now **drag and drop song titles** from the player directly to the sidebar playlist, making playlist management more intuitive and efficient.
 
-### 🌟 Navidrome Guru on Gurubase.io
+#### 🌟 Navidrome Guru on Gurubase.io
+
 We’ve partnered with [Gurubase.io](https://gurubase.io/) to bring you [Navidrome Guru](https://gurubase.io/g/navidrome). Now you can chat with an AI that is (almost) expert on Navidrome configuration and issues. More information is being added to it everyday, so it will only get better. Give it a try and let us what is missing and how it can improve.
 
-### ⚙️ Other Improvements 
+#### ⚙️ Other Improvements
 
 And as usual, lots of bug fix and improvements. For more details look at the complete changelog.
 
-## Changelog
 ### New Features
+
 * 8e2052ff95d5695a79f139793ae9b2bfeefe03f5: feat(Insights): add anonymous usage data collection (#3543) (@deluan)
 * 9c3b4561652a15846993d477003e111f0df0c585: feat(build): MSI installer improvements (#3376) (@mintsoft)
 * 8fb09e71b6c982a9650e352fdc2a665a687b368a: feat(server): get artist images from Last.fm (@deluan)
@@ -119,7 +107,9 @@ And as usual, lots of bug fix and improvements. For more details look at the com
 * 768160b05e9929bf5d82359b7768e67ffffeb9b6: feat: Windows MSI installer and service support (#3125) (@mintsoft)
 * 9ae898d071e32cf56261f3b13a639fd01092c201: feat: add Navidrome Guru on Gurubase.io (#3491) (@kursataktas)
 * cd0cf7c12be08d8035c038138d25e3f6431df021: feat: cache login background images (#3462) (@deluan)
+
 ### Bug fixes
+
 * 851f54ea5741990d7df359a3f9df6fb7a91a084c: fix(ci): fix linux packages upload (#3569) (@deluan)
 * 6bc4c0317f024fbc6cb8ce056e04fad567d9d2c7: fix(insights): better status (@deluan)
 * 906ac635c296acacd9e560409c09236ca3d64aaa: fix(insights): check if running in a container (@deluan)
@@ -160,9 +150,13 @@ And as usual, lots of bug fix and improvements. For more details look at the com
 * 9c46e2b2622e7ed4fb3a068f92e98efe928fe0dd: fix: use docker buildx, as required by Linux (@deluan)
 * 00c6a0ed1f3c7a27f3d3a027c4a2723b1f3f7fc4: fix: use target platform to build final image (#3397) (@deluan)
 * bbb3182bc97605020af5b4a76efc58a3cf2a7b88: refactor(server): remove ffmpeg unused code (@deluan)
+
 ### Documentation updates
+
 * 21dd04cb7db557f2d7e44c50f1b467fe04c8feec: docs: set org.opencontainers.image.source label in Dockerfile (#3564) (@dmarcoux)
+
 ### Build process updates
+
 * af1add43121937cc0520e910b0b569c9cc09bd32: Revert "build: new pipeline, new way to cross-compile and build docker images locally. (#3383)" (@deluan)
 * d9fa19dab32e2c177a18956dbf51c7c4934e0337: build(ci): bump goreleaser to 2.3.2 (@deluan)
 * 9e5849e4dc9852f18cae5746f1ba647619054420: build(dependabot): add docker configuration (@deluan)
@@ -173,7 +167,9 @@ And as usual, lots of bug fix and improvements. For more details look at the com
 * b14c7906411b896f507181ac9e53c57b6920152a: build: new pipeline, new way to cross-compile and build docker images locally. (#3383) (@deluan)
 * 214287e00dd64f31f6ab24b940f5d9e057a7c647: build: new pipeline, new way to cross-compile and build docker images locally. (#3388) (@deluan)
 * 9d8c49750e7800208482bd11478cbda411ce4bbf: ci: ignore refactor commits in release notes (@deluan)
+
 ### Other work
+
 * 297f72ff1a679d1308e7b733be649ab2795bdcf7: chore(deps): bump Alpine version (@deluan)
 * 6e5eea980d35934f76516c23ed5ad404df26e352: chore(deps): bump Go dependencies (@deluan)
 * faed2ea8d765f5b152ee3ad43e07dcf90f6bb51f: chore(deps): bump Go dependencies (@deluan)
@@ -215,24 +211,12 @@ And as usual, lots of bug fix and improvements. For more details look at the com
 
 **Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.3...v0.54.1
 
-## Helping out
-
-This release was only possible thanks to the support of some **awesome people**!
-
-Want to be one of them?
-You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
-
-## Where to go next?
-
-* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
-* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
-
 ## [v0.53.3](https://github.com/navidrome/navidrome/releases/tag/v0.53.3)
 
 Update to latest version from `navidrome/navidrome`
 
-## Changelog
 ### Bug fixes
+
 * 76614b8f1611731ab222fb907ebd47ac34e53528: fix(scanner): update lib.LastScanAt on each rescan (#3313) (@deluan)
 * 5be73d404f897892b4fad98248c52d1eabd73e7a: fix(server): allow changing local login background url (@deluan)
 * 13af8ed43ac42cfbcc19588c39ad0e65c7733bc6: fix(server): preserve m3u file order on import (#3314) (@kgarner7)
@@ -241,7 +225,9 @@ Update to latest version from `navidrome/navidrome`
 * 782cd26b3dbcff06cd2eb3a9b71c1d67c4b74913: fix(ui): save play mode for player (#3315) (@kgarner7)
 * 32d2d7c15b64d1749ab543659ddc4e17fd52deae: fix(ui): update Basque translation (#3306) (@xabirequejo)
 * 1fa245d141852d26837acd1c7fcf9dca0bd36174: fix(ui): update Swedish translation (#3316) (@andylundqvist)
+
 ### Other work
+
 * 84dc10529d3194505b173c582e3015dc9c47f414: chore(deps): bump github.com/prometheus/client_golang from 1.20.3 to 1.20.4 (#3301) (@dependabot[bot])
 * 6031d97c9da58a6b4c54f74e6d674d7cb07c6683: chore(deps): bump rollup from 2.79.1 to 2.79.2 in /ui (#3319) (@dependabot[bot])
 * 24d911744e606b7cb5bbf3d2ccd4f56df1db8747: chore(deps): bump github.com/pressly/goose/v3 from 3.22.0 to 3.22.1 (#3302) (@dependabot[bot])
@@ -251,26 +237,16 @@ Update to latest version from `navidrome/navidrome`
 
 **Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.2...v0.53.3
 
-## Helping out
-
-This release is only possible thanks to the support of some **awesome people**!
-
-Want to be one of them?
-You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
-
-## Where to go next?
-
-* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
-* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
-
 ## [v0.53.2](https://github.com/navidrome/navidrome/releases/tag/v0.53.2)
 
 Update to latest version from `navidrome/navidrome`
 
-## Changelog
 ### New Features
+
 * 7a6845fa5aedc2af1c246e8679e97da2ea260c9c: feat(ui): add Serbian translation (#3287) (@eevan78)
+
 ### Bug fixes
+
 * 46be041e7b86f3fe2bc6cf5f1f64a80c757c0f75: fix(scanner): improve M3U playlist import times (#2706) (@deluan)
 * 5b89bf747f0ccecc90c6c1e186b8b44d7c7d7ec3: fix(server): play queue should not return empty entries for deleted tracks (@deluan)
 * 04603a1ea2448c4e149af5be86e0da725530ac6e: fix(subsonic): honour PreferSortTag when building indexes for and (#3286) (@naiar)
@@ -284,36 +260,30 @@ Update to latest version from `navidrome/navidrome`
 * 5baf0b80aa9766ad0d9e633511f4cbe465a21f89: fix(ui): sort playlist by song duration (#3284) (@deluan)
 * a02cfbe2a7ad0690760ea990b2c01d7dd12b46b5: fix(ui): update German translation (#3290) (@deluan)
 * 27780683aa9558270b9caa0765fc403b4b713750: fix(ui): update Korean translation (#3288) (@DDinghoya)
+
 ### Build process updates
+
 * 3910e77a7a6ff747487b5ef484a67dbab5826f6a: build(ci): change GitHub release notes (#3300) (@deluan)
 * e628aafa4b02e185e59b6fa90966554dc170c1ee: build(go): set toolchain to latest version (@deluan)
+
 ### Other work
+
 * d0784b6a2171d9e6b775f841cb17c822ce059021: chore(ci): change "update translations" PR title (@deluan)
 
 **Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.1...v0.53.2
-
-## Helping out
-
-This release is only possible thanks to the support of some **awesome people**!
-
-Want to be one of them?
-You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
-
-## Where to go next?
-
-* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
-* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
 
 ## [v0.53.1](https://github.com/navidrome/navidrome/releases/tag/v0.53.1)
 
 Update to latest version from `navidrome/navidrome`
 
-## Bug fix point release
+### Bug fix point release
+
 This release fixes a couple of regressions. Thanks @kgarner7 for fixing #3274.
 
 Also, please read the release notes from [0.53.0](https://github.com/navidrome/navidrome/releases/tag/v0.53.0) if you haven't already done so.
 
-## Changelog
+### Changelog
+
 * 1ba390a72a840a256de14eaf8a1b3e813e598c36 Fix Random Album pages (#3274)
 * 8134edb5d167114b7882d5abae614049ba84ad1e Fix UI's Genre and Artist filters (#3273)
 
@@ -325,7 +295,7 @@ As always, many thanks to all contributors!
 
 Hope you all enjoy it.
 
-## Highlights
+### Highlights
 
 - [UI] Add Nuclear theme ([#3098](https://github.com/navidrome/navidrome/pull/3098)). Thanks @gruneforth
 - [UI] Add Hungarian translation. Thanks @Soderes and @ChekeredList71
@@ -350,9 +320,10 @@ Hope you all enjoy it.
 - [Scanner] Upgrade to [TagLib 2.0.2](https://github.com/taglib/taglib/releases/tag/v2.0.2)
 - [Scanner] Add config option ([#3143](https://github.com/navidrome/navidrome/pull/3143)). Thanks @john8329
 - [Scanner] Skip Synology snapshot () folders
-- [Subsonic] Fix OpenSubsonic structured lyrics response ([#3041](https://github.com/navidrome/navidrome/pull/3041)). Thanks @dweymouth 
+- [Subsonic] Fix OpenSubsonic structured lyrics response ([#3041](https://github.com/navidrome/navidrome/pull/3041)). Thanks @dweymouth
 
-## Changelog
+### Changelog
+
 * 910a46120b4ad5ec670f9e0cac377f6f4dddfd42 Bump dompurify from 2.4.5 to 2.5.6 in /ui (#3270)
 * 8c86d0945ca83eb5f4659d1875fc6dbede85f7c5 Bump github.com/mileusna/useragent from 1.3.4 to 1.3.5 (#3269)
 * 42047fde1a55ddddc24a57bbce4e47aa2907cfd4 Remove shareURL value from config.js
@@ -365,7 +336,7 @@ Hope you all enjoy it.
 * 3107170afd9f557a10f7031f23cb3c9e975a71f9 Improve SQL sanitization
 * d3bb4bb9a1452e1bf236c40c9c4f90701e0c6cb4 Bump send and express in /ui (#3260)
 * 41f380451cf2966a359aac6c0a271e160475785d Bump path-to-regexp and express in /ui (#3255)
-* e65eb225c8834447b38ac4e64b6eb43771f81ad8 Small refactoring - Remove duplication - Remove warning about builtin keyword 
+* e65eb225c8834447b38ac4e64b6eb43771f81ad8 Small refactoring - Remove duplication - Remove warning about builtin keyword
 * e8d0f2ec2c4342156f8306474a86cbdf66128663 Allow searching songs by filepath, for songs without Title
 * 47872c9e8ae1028117042d46e35383d495324326 Fix pipeline
 * 9ae2ec1a071d7c07e77363963606ebaffaa796be Ignore #snapshot folders when scanning. Fixes #3257
@@ -384,7 +355,7 @@ Hope you all enjoy it.
 * 4612b0a518b53f419a67798874659dc976bbfe8a Bump Go dependencies
 * 68ddbf4856fd98fb3a5ac597f6c30aa538f3f00c Add i18n lint job
 * a6d72d86230d9a77237a60f1816cf383654118fb Bump webpack from 5.76.1 to 5.94.0 in /ui (#3218)
-* 1a41525a7e1e21cb6dc9fc19418316670f800a36 Upgrade to 1.23, allow override CI_RELEASER_VERSION for and 
+* 1a41525a7e1e21cb6dc9fc19418316670f800a36 Upgrade to 1.23, allow override CI_RELEASER_VERSION for and
 * 8ca1aefad657f6d4a8a4a57e6f435a974327bcff Change DefaultPlaylistPublicVisibility to false
 * 67d11dd144423c1556c5d4dc2e54b9b857267240 feat: imported playlists are public by default (#3143)
 * 9f65f8f5a85e3da40b8371ce275aee22a37176ec Update translations (#3164)
@@ -405,7 +376,7 @@ Hope you all enjoy it.
 * 723f01d98cf6a31c2ca48737912e985fa2b311e3 Fixing Build/lint error: "non-constant format string in call to fmt.Errorf (govet)" (#3198)
 * c4bd0e67faa1acddaa572686ab1aea4e15cbee7b Upgrade Go to 1.23 (#3190)
 * 0c33523f45a5e07f6631d144dae51267fe82cdd3 Bump dependencies
-* 14d085f651447ef67ce76b08999a374ccde86980 Deprecate 
+* 14d085f651447ef67ce76b08999a374ccde86980 Deprecate
 * 4d4c71212f535e29e0013226c070d08c9d39b460 Build UI bundle on demand
 * e1ba152a38dcb35e8a0552a99471e7f95913ed42 Reduce noise in logs when pre-caching artwork
 * eaa7f7c7e95440e80296cf457baf393a3e6fde02 Fix Player filter
@@ -461,7 +432,7 @@ Hope you all enjoy it.
 * 939f3eee97f6f928b756f53c0f88456a61ef2206 Initialize Index Groups regex just once
 * b4ef1b1e38eec7e42c1bc56e87b5420197cb1f66 Replace gg.If with cmp.Or
 * 11bef060a371d8d6298eaeed7c41cec9dc7fe961 Small refactoring
-* abe569001871bd1482b115904a304f5a9178a6be Refactor string utilities into its own package 
+* abe569001871bd1482b115904a304f5a9178a6be Refactor string utilities into its own package
 * 46fc38bf612bcc0d9b4a465990ce04ba830cf814 Fix tests expectations
 * 6d8d519807bc9f488b8e172059f8dcbbe8cf4736 Bump prettier from 3.2.5 to 3.3.0 in /ui (#3069)
 * da9cf22b6bc251512a1377d56b89f505372f72e0 Bump github.com/spf13/viper from 1.18.2 to 1.19.0 (#3068)
