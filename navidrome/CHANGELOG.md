@@ -1,5 +1,46 @@
 # Changelog
 
+## [v0.53.2](https://github.com/navidrome/navidrome/releases/tag/v0.53.2)
+
+Update to latest version from `navidrome/navidrome`
+
+## Changelog
+### New Features
+* 7a6845fa5aedc2af1c246e8679e97da2ea260c9c: feat(ui): add Serbian translation (#3287) (@eevan78)
+### Bug fixes
+* 46be041e7b86f3fe2bc6cf5f1f64a80c757c0f75: fix(scanner): improve M3U playlist import times (#2706) (@deluan)
+* 5b89bf747f0ccecc90c6c1e186b8b44d7c7d7ec3: fix(server): play queue should not return empty entries for deleted tracks (@deluan)
+* 04603a1ea2448c4e149af5be86e0da725530ac6e: fix(subsonic): honour PreferSortTag when building indexes for and (#3286) (@naiar)
+* ecf934feabd96b4ab476efab922a661d69d34027: fix(subsonic): random albums not reshuffling. (@deluan)
+* b0e7941abe81d70940247b8e1a7099e05264344f: fix(ui): fix Nuclear Theme (#3291) (@gruneforth)
+* b6433057e933b266762d98b53469c936cbbd4b19: fix(ui): make random albums order stick when coming back to the grid (@deluan)
+* ee2e04b832be954fd12b8531705dc761ebe3e648: fix(ui): random seed for album list on page reload (#3279) (@kgarner7)
+* 196557a41abe7e63b84c6c9931b23e70bfd3abde: fix(ui): show effective dB of track when playing (#3293) (@kgarner7)
+* 50870d3e6129021551271f0525ec01b2d5610531: fix(ui): sort by favourited (@deluan)
+* 11d96f1da40e2c454917d91748dd704082459a40: fix(ui): sort mappings (#3296) (@caiocotts)
+* 5baf0b80aa9766ad0d9e633511f4cbe465a21f89: fix(ui): sort playlist by song duration (#3284) (@deluan)
+* a02cfbe2a7ad0690760ea990b2c01d7dd12b46b5: fix(ui): update German translation (#3290) (@deluan)
+* 27780683aa9558270b9caa0765fc403b4b713750: fix(ui): update Korean translation (#3288) (@DDinghoya)
+### Build process updates
+* 3910e77a7a6ff747487b5ef484a67dbab5826f6a: build(ci): change GitHub release notes (#3300) (@deluan)
+* e628aafa4b02e185e59b6fa90966554dc170c1ee: build(go): set toolchain to latest version (@deluan)
+### Other work
+* d0784b6a2171d9e6b775f841cb17c822ce059021: chore(ci): change "update translations" PR title (@deluan)
+
+**Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.53.1...v0.53.2
+
+## Helping out
+
+This release is only possible thanks to the support of some **awesome people**!
+
+Want to be one of them?
+You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan) or [contribute with code](https://www.navidrome.org/docs/developers/).
+
+## Where to go next?
+
+* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
+* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
+
 ## [v0.53.1](https://github.com/navidrome/navidrome/releases/tag/v0.53.1)
 
 Update to latest version from `navidrome/navidrome`
