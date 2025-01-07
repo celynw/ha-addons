@@ -1,7 +1,7 @@
 {
 	"build_from": {
-		"aarch64": "navidrome/navidrome:0.53.0",
-		"armv7": "navidrome/navidrome:0.53.0",
-		"amd64": "navidrome/navidrome:0.53.0"
+		"aarch64": "navidrome/navidrome:0.53.1",
+		"armv7": "navidrome/navidrome:0.53.1",
+		"amd64": "navidrome/navidrome:0.53.1"
 	}
 }

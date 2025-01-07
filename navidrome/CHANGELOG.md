@@ -1,5 +1,18 @@
 # Changelog
 
+## [v0.53.1](https://github.com/navidrome/navidrome/releases/tag/v0.53.1)
+
+Update to latest version from `navidrome/navidrome`
+
+## Bug fix point release
+This release fixes a couple of regressions. Thanks @kgarner7 for fixing #3274.
+
+Also, please read the release notes from [0.53.0](https://github.com/navidrome/navidrome/releases/tag/v0.53.0) if you haven't already done so.
+
+## Changelog
+* 1ba390a72a840a256de14eaf8a1b3e813e598c36 Fix Random Album pages (#3274)
+* 8134edb5d167114b7882d5abae614049ba84ad1e Fix UI's Genre and Artist filters (#3273)
+
 ## [v0.53.0](https://github.com/navidrome/navidrome/releases/tag/v0.53.0)
 
 Update to latest version from `navidrome/navidrome`
