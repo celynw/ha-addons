@@ -101,7 +101,7 @@ jobs:
     - name: Commit and push changes
       run: |
         git add navidrome/Dockerfile navidrome/build.json navidrome/config.json navidrome/CHANGELOG.md
-        git commit -m "Update to upstream release ${{ env.version }}"
+        git commit -m "Update Navidrome to upstream release ${{ env.version }}"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
