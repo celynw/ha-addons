@@ -1,5 +1,36 @@
 # Changelog
 
+## [v0.54.2](https://github.com/navidrome/navidrome/releases/tag/v0.54.2)
+
+Update to latest version from `navidrome/navidrome`
+
+## Changelog
+### Bug fixes
+* 99dfb832eb679d230f1b22d96edc86bf88055a7a: fix(insights): get Windows version (@deluan)
+* c8f174ea8477047ea7c5c4165f0f5b376e367cc1: fix(server): change log level for some last.fm warnings (@deluan)
+* 8880f6703585bb7eb7794a0b60383f3d75dddb76: fix(ui): update Español, Français, Svenska translations from POEditor (#3576) (@deluan)
+* 972229d1e8a7bda984d9a1c7f0080ef6f1d2b598: fix(ui): update Hungarian translation (#3574) (@ChekeredList71)
+### Build process updates
+* d4dc8180a26e8d567c3edff4a9f959dcb758312e: build(ci): fix release version label and package names (#3573) (@deluan)
+* 0b184893278620bb421a85c8b47df36900cd4df7: build(poeditor): change commit message for translation update PRs (@deluan)
+### Other work
+* 51c16aa69fa91cea4d00d648bbe1599a45e3533e: chore: add PikaPods to release notes (@deluan)
+
+**Full Changelog**: https://github.com/navidrome/navidrome/compare/v0.54.1...v0.54.2
+
+## Helping out
+
+This release is only possible thanks to the support of some **awesome people**!
+
+Want to be one of them?
+You can [sponsor](https://github.com/sponsors/deluan), pay me a [Ko-fi](https://ko-fi.com/deluan), or [contribute with code](https://www.navidrome.org/docs/developers/).
+
+## Where to go next?
+
+* Read installation instructions on our [website](https://www.navidrome.org/docs/installation/).
+* Host Navidrome on [PikaPods](https://www.pikapods.com/pods/navidrome) for a simple cloud solution.
+* Reach out on [Discord](https://discord.gg/xh7j7yF), [Reddit](https://www.reddit.com/r/navidrome/) and [Twitter](https://twitter.com/navidrome)!
+
 ## [v0.54.1](https://github.com/navidrome/navidrome/releases/tag/v0.54.1)
 
 Update to latest version from `navidrome/navidrome`
