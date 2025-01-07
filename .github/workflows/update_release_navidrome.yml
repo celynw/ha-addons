@@ -39,6 +39,7 @@ jobs:
       id: set_version_manually
       if: ${{ github.event.inputs.version != '' }}
       run: |
+        version=${{ github.event.inputs.version }}
         echo "version=${version#v}" >> $GITHUB_ENV
         echo "Version: ${version}" >> $GITHUB_STEP_SUMMARY
 
