@@ -1,7 +1,7 @@
 {
 	"build_from": {
-		"aarch64": "deluan/navidrome:0.52.5",
-		"armv7": "deluan/navidrome:0.52.5",
-		"amd64": "deluan/navidrome:0.52.5"
+		"aarch64": "navidrome/navidrome:0.53.0",
+		"armv7": "navidrome/navidrome:0.53.0",
+		"amd64": "navidrome/navidrome:0.53.0"
 	}
 }
