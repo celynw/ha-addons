@@ -61,7 +61,7 @@ jobs:
 
     - name: Update build.json
       run: |
-        jq --tab --arg version "${{ env.version }}" '.build_from |= map_values("navidrome/navidrome:" + $version)' navidrome/build.json > navidrome/build.json.tmp
+        jq --tab --arg version "${{ env.version }}" '.build_from |= map_values("deluan/navidrome:" + $version)' navidrome/build.json > navidrome/build.json.tmp
         mv navidrome/build.json.tmp navidrome/build.json
 
     - name: Update config.json
