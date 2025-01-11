@@ -48,28 +48,33 @@ jobs:
 
     - name: Check if we need to update
       id: check_version
+      continue-on-error: true
       run: |
         current_version=$(cat navidrome/config.json | jq -r '.version')
         if [[ "${current_version}" == "${{ env.version }}" ]]; then
           echo "No new version found" >> $GITHUB_STEP_SUMMARY
-          exit 1
+          exit 0
         fi
 
     - name: Update Dockerfile
+      if: steps.check_version.outcome != 'success'
       run: |
         sed -i "s/ARG BUILD_UPSTREAM=.*/ARG BUILD_UPSTREAM=${{ env.version }}/" navidrome/Dockerfile
 
     - name: Update build.json
+      if: steps.check_version.outcome != 'success'
       run: |
         jq --tab --arg version "${{ env.version }}" '.build_from |= map_values("deluan/navidrome:" + $version)' navidrome/build.json > navidrome/build.json.tmp
         mv navidrome/build.json.tmp navidrome/build.json
 
     - name: Update config.json
+      if: steps.check_version.outcome != 'success'
       run: |
         jq --tab --arg version "${{ env.version }}" '.version = $version' navidrome/config.json > navidrome/config.json.tmp
         mv navidrome/config.json.tmp navidrome/config.json
 
     - name: Get upstream release notes
+      if: steps.check_version.outcome != 'success'
       id: get_release_notes
       uses: octokit/request-action@v2.x
       with:
@@ -80,6 +85,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Update CHANGELOG.md
+      if: steps.check_version.outcome != 'success'
       run: |
         release_notes=$(
           cat <<EOF | jq -r '.body'
@@ -94,11 +100,13 @@ jobs:
         mv navidrome/CHANGELOG.md.tmp navidrome/CHANGELOG.md
 
     - name: Set up Git
+      if: steps.check_version.outcome != 'success'
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
     - name: Commit and push changes
+      if: steps.check_version.outcome != 'success'
       run: |
         git add navidrome/Dockerfile navidrome/build.json navidrome/config.json navidrome/CHANGELOG.md
         git commit -m "Update Navidrome to upstream release ${{ env.version }}"
