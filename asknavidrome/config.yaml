@@ -1,5 +1,5 @@
 name: AskNavidrome
-version: "0.8"
+version: "1.0_0.8"
 slug: asknavidrome
 description: '"An Alexa skill to allow streaming of music from Subsonic API
   compatible media servers on Amazon Echo devices"'
