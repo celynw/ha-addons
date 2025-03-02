@@ -1,0 +1,36 @@
+name: AskNavidrome
+version: "0.8"
+slug: asknavidrome
+description: '"An Alexa skill to allow streaming of music from Subsonic API
+  compatible media servers on Amazon Echo devices"'
+arch:
+  - armhf
+  - armv7
+  - aarch64
+  - amd64
+  - i386
+url: https://github.com/celynw/ha-addons/tree/main/asknavidrome
+webui: http://[HOST]:[PORT:5000]
+ports:
+  5000/tcp: 5000
+options:
+  NAVI_SKILL_ID: null
+  NAVI_URL: null
+  NAVI_USER: null
+  NAVI_PASS: null
+  NAVI_SONG_COUNT: 50
+  NAVI_PORT: 443
+  NAVI_API_PATH: /rest
+  NAVI_API_VER: 1.16.1
+  NAVI_DEBUG: 0
+schema:
+  NAVI_SKILL_ID: str
+  NAVI_URL: url
+  NAVI_USER: str
+  NAVI_PASS: password
+  NAVI_SONG_COUNT: int
+  NAVI_PORT: port
+  NAVI_API_PATH: str
+  NAVI_API_VER: str
+  NAVI_DEBUG: int
+init: false
