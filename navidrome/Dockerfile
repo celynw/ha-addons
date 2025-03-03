@@ -3,7 +3,7 @@
 # Build Image --------------------------------------------------------------------------
 ARG BUILD_FROM
 ARG BUILD_VERSION
-ARG BUILD_UPSTREAM=0.54.4
+ARG BUILD_UPSTREAM=0.54.5
 FROM ${BUILD_FROM}
 LABEL maintainer="celynw <3299161+celynw@users.noreply.github.com>"
 

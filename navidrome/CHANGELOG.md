@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0_0.54.5
+
+- Update to upstream [v0.54.5](https://github.com/navidrome/navidrome/releases/tag/v0.54.5)
+
 ## v1.0_0.54.4
 
 - Update to upstream [v0.54.4](https://github.com/navidrome/navidrome/releases/tag/v0.54.4)
