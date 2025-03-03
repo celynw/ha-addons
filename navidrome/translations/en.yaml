@@ -6,91 +6,70 @@ configuration:
     name: Group ID
   ND_MUSICFOLDER:
     name: Music folder
-    description: >-
-      Folder where your music library is stored. Can be read-only
+    description: Folder where your music library is stored. Can be read-only
   ND_DATAFOLDER:
     name: Data folder
-    description: >-
-      Folder to store application data (DB)
+    description: Folder to store application data (DB)
   ND_ENABLESTARRATING:
     name: Enable star rating
-    description: >-
-      Enable 5-star ratings in the UI
+    description: Enable 5-star ratings in the UI
   ND_ENABLEFAVOURITES:
     name: Enable favourites
-    description: >-
-      Enable toggling "Heart"/"Loved" for songs/albums/artists in the UI (maps to "Star"/"Starred" in Subsonic Clients)
+    description: Enable toggling "Heart"/"Loved" for songs/albums/artists in the UI (maps to "Star"/"Starred" in Subsonic Clients)
   ND_LISTENBRAINZ_ENABLED:
     name: ListenBrainz enabled
-    description: >-
-      Set this to false to completely disable ListenBrainz integration
+    description: Set this to false to completely disable ListenBrainz integration
   ND_ENABLESHARING:
     name: Enable sharing
   ND_SHAREURL":
     name: Share URL
-    description: >-
-      Base URL for shared links. Useful when your server address is not a public (ex: when using Tailscale)
+    description: Base URL for shared links. Useful when your server address is not a public (ex: when using Tailscale)
   ND_ENABLEGRAVATAR:
     name: Enable Gravatar
-    description: >-
-      Use Gravatar images as the user profile image. Needs the user's email to be filled
+    description: Use Gravatar images as the user profile image. Needs the user's email to be filled
   ND_SPOTIFY_ID:
     name: Spotify client ID
-    description: >-
-      Required if you want artist images
+    description: Required if you want artist images
   ND_SPOTIFY_SECRET:
     name: Spotify client secret
-    description: >-
-      Required if you want artist images
+    description: Required if you want artist images
   ND_LASTFM_ENABLED:
     name: LastFM enabled
-    description: >-
-      Set this to false to completely disable Last.fm integration
+    description: Set this to false to completely disable Last.fm integration
   ND_LASTFM_APIKEY:
     name: Last.fm API key
   ND_LASTFM_SECRET:
     name: Last.fm API secret
   ND_JUKEBOX_ENABLED:
     name: Jukebox enabled
-    description: >-
-      Enable Jukebox mode (play audio on server's hardware)
+    description: Enable Jukebox mode (play audio on server's hardware)
   ND_JUKEBOX_DEFAULT:
     name: Jukebox default
-    description: >-
-      Device to use for Jukebox mode, if there are multiple "Jukebox Devices" entries
+    description: Device to use for Jukebox mode, if there are multiple "Jukebox Devices" entries
   ND_JUKEBOX_DEVICES:
     name: Jukebox devices
-    description: >-
-      List of devices that can be used by the Jukebox
+    description: List of devices that can be used by the Jukebox
   ND_TRANSCODINGCACHESIZE:
     name: Transcoding Cache Size
-    description: >-
-      Size of transcoding cache. Set to "0" to disable cache
+    description: Size of transcoding cache. Set to "0" to disable cache
   ND_SCANSCHEDULE:
     name: Scan schedule
-    description: >-
-      Configure periodic scans using "cron" syntax. To disable it altogether, set it to "0"
+    description: Configure periodic scans using "cron" syntax. To disable it altogether, set it to "0"
   ND_SESSIONTIMEOUT:
     name: Session timeout
-    description: >-
-      How long Navidrome will wait before closing web ui idle sessions
+    description: How long Navidrome will wait before closing web ui idle sessions
   ND_UIWELCOMEMESSAGE:
     name: Welcome message
-    description: >-
-      Add a welcome message to the login screen
+    description: Add a welcome message to the login screen
   ND_UILOGINBACKGROUNDURL:
     name: Login background URL
-    description: >-
-      Change background image used in the login page
+    description: Change background image used in the login page
   ND_DEFAULTPLAYLISTPUBLICVISIBILITY:
     name: Default playlist public visibility
-    description: >-
-      Set imported playlists as public by default
+    description: Set imported playlists as public by default
   ND_SMARTPLAYLISTREFRESHDELAY:
     name: Smart playlist refresh delay
-    description: >-
-      How often to refresh Smart Playlists
+    description: How often to refresh Smart Playlists
   ND_ENABLEINSIGHTSCOLLECTOR:
     name: Enable Insights Collector
-    description: >-
-      Controls whether the server will run its Anonymous Data Collection feature to help improve the project
+    description: Controls whether the server will run its Anonymous Data Collection feature to help improve the project
