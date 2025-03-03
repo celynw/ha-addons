@@ -1,7 +1,7 @@
 ARG BUILD_FROM
 
 FROM $BUILD_FROM AS build
-LABEL maintainer="Celyn Walters <3299161+celynw@users.noreply.github.com>"
+LABEL maintainer="celynw <3299161+celynw@users.noreply.github.com>"
 LABEL org.opencontainers.image.source=https://github.com/rosskouk/asknavidrome
 
 RUN apk add --no-cache \
@@ -22,7 +22,7 @@ RUN source ../env/bin/activate && pip --no-cache-dir install wheel && pip --no-c
 
 
 FROM $BUILD_FROM
-LABEL maintainer="Celyn Walters <3299161+celynw@users.noreply.github.com>"
+LABEL maintainer="celynw <3299161+celynw@users.noreply.github.com>"
 LABEL org.opencontainers.image.source=https://github.com/rosskouk/asknavidrome
 
 RUN apk add --no-cache python3
