@@ -1,7 +1,7 @@
 build_from:
-  armhf: deluan/navidrome:0.54.3
-  armv7: deluan/navidrome:0.54.3
-  aarch64: deluan/navidrome:0.54.3
-  amd64: deluan/navidrome:0.54.3
-  i386: deluan/navidrome:0.54.3
+  armhf: deluan/navidrome:0.54.4
+  armv7: deluan/navidrome:0.54.4
+  aarch64: deluan/navidrome:0.54.4
+  amd64: deluan/navidrome:0.54.4
+  i386: deluan/navidrome:0.54.4
 squash: false
