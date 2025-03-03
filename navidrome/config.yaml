@@ -67,6 +67,7 @@ devices:
   - /dev/nvme2
 map:
   - media:rw
+  - config:rw
   - share:rw
 options:
   ND_MUSICFOLDER: null
