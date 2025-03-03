@@ -21,9 +21,10 @@ configuration:
     description: Set this to false to completely disable ListenBrainz integration
   ND_ENABLESHARING:
     name: Enable sharing
-  ND_SHAREURL":
+  ND_SHAREURL:
     name: Share URL
-    description: Base URL for shared links. Useful when your server address is not a public (ex: when using Tailscale)
+    description: >-
+      Base URL for shared links. Useful when your server address is not a public (ex: when using Tailscale)
   ND_ENABLEGRAVATAR:
     name: Enable Gravatar
     description: Use Gravatar images as the user profile image. Needs the user's email to be filled
