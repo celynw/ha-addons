@@ -1,3 +1,7 @@
+> [!WARNING]
+> Since moving to Proxmox and Linux Containers, working on these as addons is no longer useful to me.
+> I'm still alive, and actively using Home Assistant and Navidrome, but I'm hoping somebody else will maintain up-to-date versions of these. Sorry!
+
 # Home Assistant Addons
 
 ## About
